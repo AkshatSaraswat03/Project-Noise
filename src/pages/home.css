@@ -1,0 +1,46 @@
+
+.section-1{
+  height: 110vh;
+  padding: 100px 0px;
+  z-index: -4;
+}
+
+.gif{
+  position: absolute;
+}
+
+.mintComponent{
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 40% !important;
+}
+
+
+.section-2{
+  text-align: center;
+  padding: 100px 0px;
+  /* height: 80vh; */
+  border: solid 5px transparent;
+  border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00);
+  border-image-slice: 1;
+}
+.section-3{
+  padding: 100px 0px;
+
+}
+.section-4{
+  padding: 100px 0px;
+  text-align: center;
+  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
+}
+
+.section-5{
+  padding-top: 100px;
+}
+
+.footer{
+  border-top: solid 2px transparent;
+  border-image: linear-gradient(30deg, #0EFFB7, #FF130D, #FFFF00);
+  border-image-slice: 1;
+}

@@ -1,0 +1,10 @@
+hr{
+  border: none;
+  height: 2px !important;
+  background: white !important;
+}
+
+.cardDiv{
+  background-color: #2b2b2b;
+  color: #ffffff;
+}

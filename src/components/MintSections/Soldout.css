@@ -1,0 +1,10 @@
+hr{
+  border: none;
+  height: 12px !important;
+  background: white;
+}
+
+.soldoutDiv{
+  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
+  color: #000000;
+}
