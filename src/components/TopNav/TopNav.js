@@ -1,6 +1,6 @@
 import React from 'react'
-import { withRouter, BrowserRouter as Router } from 'react-router-dom';
-import { Nav, Navbar, Container, Button } from 'react-bootstrap'
+import { withRouter } from 'react-router-dom';
+import { Nav, Navbar, Container, Button, Row, Col } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { FaTwitter, FaDiscord } from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
@@ -11,15 +11,13 @@ const TopNav = () => {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" variant="dark" className='py-3 dark-bg' sticky="top">
+      <Navbar collapseOnSelect expand="lg" variant="dark" className='py-3 dark-bg navbar' sticky="top">
         <Container>
-          <LinkContainer to='/'>
-            <Navbar.Brand href="/" className='primary-text'>Project Noise</Navbar.Brand>
-          </LinkContainer>
+          <Navbar.Brand className='primary-text nav-brand'>Project Noise</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <LinkContainer to='/'>
+              <LinkContainer to='/home'>
                 <Nav.Link className='home-nav'>Home</Nav.Link>
               </LinkContainer>
               <LinkContainer to='/gallery'>
@@ -30,16 +28,18 @@ const TopNav = () => {
               </LinkContainer>
             </Nav>
             <Nav>
-              <Button variant='danger' className='p-2 mx-4 btn-outline'>Connect Wallet</Button>
-              <LinkContainer className='mx-1' to='/'>
-                <Nav.Link><FaTwitter size={25} /></Nav.Link>
-              </LinkContainer>
-              <LinkContainer className='mx-1' to='/'>
-                <Nav.Link><RiInstagramFill size={25} /></Nav.Link>
-              </LinkContainer>
-              <LinkContainer className='mx-1' to='/'>
-                <Nav.Link><FaDiscord size={25} /></Nav.Link>
-              </LinkContainer>
+              <Button variant='secondary' className='p-2 mx-4 btn-outline' id='wallet-btn'>Connect Wallet</Button>
+              <Row>
+                <Col>
+                  <Nav.Link className='mx-1 twitter'><FaTwitter size={25} /></Nav.Link>
+                </Col>
+                <Col>
+                  <Nav.Link className='mx-1 instagram'><RiInstagramFill size={25} /></Nav.Link>
+                </Col>
+                <Col>
+                  <Nav.Link className='mx-1 discord'><FaDiscord size={25} /></Nav.Link>
+                </Col>
+              </Row>
             </Nav>
           </Navbar.Collapse>
         </Container>

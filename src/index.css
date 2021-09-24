@@ -55,17 +55,22 @@ p{
 .btn-primary{
   color: #000000 !important;
   background: linear-gradient(60deg,#FFFF00, #FF0D0D,  #0EFFB7) !important;
+  border: none;
+  border-radius: 0;
 }
 
 .btn-primary:hover{
   color: #000000 !important;
   background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
+  border: none;
+  border-radius: 0;
 }
 
 .btn-primary:active{
   color: #000000 !important;
   background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
   border: none;
+  border-radius: 0;
 }
 
 /* 2nd primary button */

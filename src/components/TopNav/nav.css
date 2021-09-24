@@ -1,0 +1,64 @@
+.home-nav{
+  color:rgba(255,255,255,.55);
+}
+.home-nav:hover {
+  color:#FFFFFF !important;
+}
+
+
+.gallery-nav{
+  color:rgba(255,255,255,.55);
+}
+.gallery-nav:hover {
+  color:#FFFFFF !important;
+}
+
+
+.learn-nav{
+  color:rgba(255,255,255,.55);
+}
+.learn-nav:hover {
+  color:#FFFFFF !important;
+}
+
+.active{
+  border-bottom: solid 2px transparent !important;
+  border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00) !important;
+  border-image-slice: 1 !important;
+}
+
+.twitter{
+  color: #FFFFFF !important;
+}
+.instagram{
+  color: #FFFFFF !important;
+}
+.discord{
+  color: #FFFFFF !important;
+}
+
+
+@media screen and (max-width: 600px) {
+  .navbar{
+    text-align: center;
+  }
+  .learn-nav{
+    visibility: hidden;
+    display: none;
+  }
+  .nav-brand{
+    visibility: hidden;
+    display: none;
+  }
+  .home-nav{
+    margin-top: 25px;
+  }
+  .gallery-nav{
+    margin-top: 25px;
+  }
+  #wallet-btn{
+    margin: 25px 0 ;
+  }
+  
+}
+

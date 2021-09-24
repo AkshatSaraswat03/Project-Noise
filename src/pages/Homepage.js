@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap'
 import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
-import { ReactComponent as LandingSvg } from '../assets/landinggif.svg';
+import Logo from '../assets/Landingweb.gif'
 import { FaTwitter, FaDiscord } from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
 
@@ -16,13 +16,14 @@ const HomePage = () => {
   return (
     <>
       <div className='section-1 dark-bg'>
-        <Row>
+        <Row className='px-3'>
           <Col lg={3}>
 
           </Col>
           <Col lg={6} style={{ position: 'relative' }}>
-
-            <LandingSvg className='gif' />
+            <div>
+              <img src={Logo} alt='gif' className='gif' />
+            </div>
             <div className='mintComponent'>
               <SaleLive />
             </div>
@@ -34,7 +35,7 @@ const HomePage = () => {
       </div>
 
       <div className='section-2'>
-        <Row>
+        <Row className='px-3'>
           <Col lg={3}></Col>
           <Col lg={6}>
             <h1 className='primary-text'>"Not deliberate, not random.</h1>
@@ -54,14 +55,14 @@ const HomePage = () => {
       </div>
 
       <div className='section-3 dark-bg'>
-        <Row className='py-5'>
+        <Row className='py-5 px-3'>
           <Col lg={3}></Col>
           <Col lg={9}>
             <LogoSvg />
           </Col>
 
         </Row>
-        <Row>
+        <Row className='pb-3 px-3'>
           <Col lg={3}></Col>
           <Col lg={4}>
             <Row><h1>WHAT IS PROJECT NOISE?</h1></Row>
@@ -72,7 +73,7 @@ const HomePage = () => {
           <Col lg={5}></Col>
         </Row>
 
-        <Row>
+        <Row className='pb-5 px-3'>
           <Col lg={3}></Col>
           <Col lg={3}>
             <p>
@@ -88,16 +89,16 @@ const HomePage = () => {
           <Col lg={6}></Col>
         </Row>
 
-        <Row>
+        <Row className='pt-5 pb-3 px-3'>
           <Col lg={3}></Col>
           <Col> <h3>THE ORIGIN SERIES</h3></Col>
         </Row>
-        <Row>
+        <Row className='pb-3 px-3'>
           <Col lg={3}></Col>
           <Col> <h1>#REF<span className='primary-text'>1</span>ECT</h1></Col>
         </Row>
 
-        <Row>
+        <Row className='px-3'>
           <Col lg={3}></Col>
           <Col lg={3}>
             <p>
@@ -124,12 +125,12 @@ const HomePage = () => {
       </div>
 
       <div className='section-5 dark-bg'>
-        <Row className='pb-5'>
+        <Row className='pb-5 px-3'>
           <Col lg={3}></Col>
           <Col lg={3}>
             <Logo2Svg />
 
-            <h1 className='py-5'>WHY ART?</h1>
+            <h1 className='py-5 px-3'>WHY ART?</h1>
             <p>
               "We don't read and write poetry because it's cute. We read and write poetry because we are members of human race.<br />
               And the human race is filled with passion <br />
@@ -152,12 +153,20 @@ const HomePage = () => {
           <Col lg={3}></Col>
           <Col lg={6} className='footer'>
             <Row className='py-2'>
-              <Col lg={4}><p>Project Noise</p></Col>
+              <Col lg={4} className='footer-brand'><p>Project Noise</p></Col>
               <Col lg={5}></Col>
               <Col lg={3}>
-                <FaTwitter size={25} className='mx-3' />
-                <RiInstagramFill size={25} className='mx-3' />
-                <FaDiscord size={25} className='mx-3' />
+                <Row className='m-0 p-0'>
+                  <Col className='text-center'>
+                    <FaTwitter size={25} />
+                  </Col>
+                  <Col className='text-center'>
+                    <RiInstagramFill size={25} />
+                  </Col>
+                  <Col className='text-center'>
+                    <FaDiscord size={25} />
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Col>
