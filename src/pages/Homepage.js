@@ -36,7 +36,7 @@ const HomePage = () => {
             </Col>
             <div className='dummydiv'></div>
             <Col lg={4} className='mintComponent'>
-              <Countdown />
+              <SaleLive />
             </Col>
           </Col>
           <Col lg={3}>
@@ -74,8 +74,8 @@ const HomePage = () => {
         <Row className='firstrow'>
           <Col lg={3}></Col>
           <Col lg={6}>
-            <div style={{ width: 'max-content' }}><h1>WHAT IS PROJECT NOISE?</h1>
-              <div className='text-end'>
+            <div style={{ width: 'max-content', maxWidth: '90vw' }}><h1>WHAT IS PROJECT NOISE?</h1>
+              <div className='text-end' style={{ maxWidth: '90vw' }}>
                 <h6>[Noise is a contronym]</h6>
               </div>
             </div>
@@ -129,7 +129,7 @@ const HomePage = () => {
         <Row className='section4-row1'>
           <Col><h1>UTILITY?</h1></Col>
         </Row>
-        <Row>
+        <Row className='section4-row2'>
           <Col><h1>ART.</h1></Col>
         </Row>
       </div>
@@ -163,7 +163,7 @@ const HomePage = () => {
       <div className='section-6 dark-bg px-3'>
         <Row>
           <Col lg={3}></Col>
-          <Col lg={6} className='footer'>
+          <Col lg={6} className='footer pt-0'>
             <Row className='py-2'>
               <Col lg={4} className='footer-brand px-0'><p>Project Noise</p></Col>
               <Col lg={5}></Col>

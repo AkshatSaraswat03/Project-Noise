@@ -8,7 +8,7 @@ const SaleLive = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className='transparent-bg'>
+    <div className='dark-bg card'>
       <h1>#REF<span className='primary-text'>1</span>ECT</h1>
       <p>
         The first set of 2,222 art pieces on Solana blockchain exploring noise as a deterministic function.
