@@ -1,20 +1,23 @@
+.row{
+  max-width: 100vw;
+}
 
 .section-1{
-  height: 110vh;
+  height: 100vh;
   padding: 100px 0px;
   z-index: -4;
 }
 
 .gif{
   position: absolute;
-  width: 70% !important;
+  width: 80% !important;
 }
 
 .mintComponent{
   position: absolute;
   right: 0;
   top: 80px;
-  width: 40% !important;
+  width: 30% !important;
 }
 
 .close{
@@ -23,33 +26,89 @@
   border: none;
 }
 
+/* section 2 */
 
 .section-2{
   text-align: center;
-  padding: 100px 0px;
-  /* height: 80vh; */
+  padding: 160px 0px;
   border: solid 5px transparent;
   border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00);
   border-image-slice: 1;
 }
-.section-3{
-  padding: 100px 0px;
 
+.section-2 h3{
+  padding-top: 12px;
+  margin: 0;
 }
+
+.section-2 div{
+  padding-top: 80px;
+}
+
+.section-2 p{
+  font-size: 18px !important;
+  color: #000000 !important;
+}
+
+
+
+/* section 3 */
+
+.section-3{
+  padding: 120px 0px;
+}
+
+.section-3 p{
+  margin-bottom: 20px;
+}
+
+.section-3 h4{
+  padding-top: 88px;
+}
+.reflect{
+  padding-bottom: 48px;
+}
+
+.firstrow{
+  padding: 48px 0;
+}
+
+
+
+
+/* Section-4 */
+
+
 .section-4{
-  padding: 100px 0px;
+  padding: 184px 0px;
   text-align: center;
   background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
 }
 
-.section-5{
-  padding-top: 100px;
+.section4-row1{
+  padding-bottom: 120px;
 }
+
+
+/* section-5 */
+
+.section-5{
+  padding: 100px 0;
+}
+
+.section-5 h1{
+  padding: 48px 0;
+}
+.section-5 h3{
+  padding-top: 48px;
+}
+
 
 .footer{
   border-top: solid 2px transparent;
   border-image: linear-gradient(30deg, #0EFFB7, #FF130D, #FFFF00);
   border-image-slice: 1;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 600px) {

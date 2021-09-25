@@ -29,26 +29,37 @@ h2{
 h3{
   font-size: 28px !important;
 }
+h4{
+  font-size: 24px !important;
+}
+h6{
+  font-size: 18px !important;
+}
 
 p{
   font-size: 20px !important;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* black background */
 .dark-bg{
   background-color: #050505;
-  color: #F2F2F2;
+  color: #FFFFFF;
 }
 
 /* white background */
 .light-bg{
   background-color: #F2F2F2;
-  color: #040404;
+  color: #000000;
 }
 
 .transparent-bg{
   background: rgba(0,0,0,0);
   color: #F2F2F2;
+}
+
+.px-3{
+  padding: 0 24px !important;
 }
 
 /* primary button */
@@ -142,4 +153,15 @@ p{
 
 .btn-block{
   width: 100%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 36px !important;
+  }
+  p{
+    font-size: 18px !important;
+  }
 }

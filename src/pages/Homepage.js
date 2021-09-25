@@ -35,19 +35,17 @@ const HomePage = () => {
       </div>
 
       <div className='section-2'>
-        <Row className='px-3'>
+        <Row className='px-3 py-0'>
           <Col lg={3}></Col>
-          <Col lg={6}>
+          <Col lg={6} className='p-0'>
             <h1 className='primary-text'>"Not deliberate, not random.</h1>
             <h1 className='primary-text'>Some place in between."</h1>
-            <br />
-            <p>-Ex Machina</p>
-            <br />
-            <br />
-
-            <p>Giving up the control, to achieve that place in between is our dilemma</p>
-            <p>The filemma - which gives rise to provoking uncertain moments in the Cartesian space.</p>
-            <p>And these moments, we present to you.</p>
+            <h3>-Ex Machina</h3>
+            <div className='m-0'>
+              <p>Giving up the control, to achieve that place in between is our dilemma</p>
+              <p>The filemma - which gives rise to provoking uncertain moments in the Cartesian space.</p>
+              <p>And these moments, we present to you.</p>
+            </div>
           </Col>
           <Col lg={3}></Col>
         </Row>
@@ -55,25 +53,27 @@ const HomePage = () => {
       </div>
 
       <div className='section-3 dark-bg'>
-        <Row className='py-5 px-3'>
+        <Row className='px-3'>
           <Col lg={3}></Col>
           <Col lg={9}>
             <LogoSvg />
           </Col>
 
         </Row>
-        <Row className='pb-3 px-3'>
+        <Row className='px-3 firstrow'>
           <Col lg={3}></Col>
-          <Col lg={4}>
-            <Row><h1>WHAT IS PROJECT NOISE?</h1></Row>
-            <Row className='text-end'>
-              <h3>[Noise is a contronym]</h3>
-            </Row>
+          <Col lg={6}>
+            <div className='p-0' style={{ width: 'auto' }}>
+              <Row><h1>WHAT IS PROJECT NOISE?</h1></Row>
+              <Row className='text-end'>
+                <h6>[Noise is a contronym]</h6>
+              </Row>
+            </div>
           </Col>
-          <Col lg={5}></Col>
+          <Col lg={3}></Col>
         </Row>
 
-        <Row className='pb-5 px-3'>
+        <Row className='px-3'>
           <Col lg={3}></Col>
           <Col lg={3}>
             <p>
@@ -89,13 +89,13 @@ const HomePage = () => {
           <Col lg={6}></Col>
         </Row>
 
-        <Row className='pt-5 pb-3 px-3'>
+        <Row className='px-3'>
           <Col lg={3}></Col>
-          <Col> <h3>THE ORIGIN SERIES</h3></Col>
+          <Col> <h4>THE ORIGIN SERIES</h4></Col>
         </Row>
-        <Row className='pb-3 px-3'>
+        <Row className='px-3'>
           <Col lg={3}></Col>
-          <Col> <h1>#REF<span className='primary-text'>1</span>ECT</h1></Col>
+          <Col className='reflect'> <h1>#REF<span className='primary-text'>1</span>ECT</h1></Col>
         </Row>
 
         <Row className='px-3'>
@@ -116,21 +116,21 @@ const HomePage = () => {
 
       </div>
       <div className='section-4'>
-        <Row className='py-5 my-5'>
+        <Row className='section4-row1'>
           <Col><h1>UTILITY?</h1></Col>
         </Row>
-        <Row className='py-5 my-5'>
+        <Row>
           <Col><h1>ART.</h1></Col>
         </Row>
       </div>
 
       <div className='section-5 dark-bg'>
-        <Row className='pb-5 px-3'>
+        <Row className='px-3'>
           <Col lg={3}></Col>
           <Col lg={3}>
             <Logo2Svg />
 
-            <h1 className='py-5 px-3'>WHY ART?</h1>
+            <h1 className='m-0'>WHY ART?</h1>
             <p>
               "We don't read and write poetry because it's cute. We read and write poetry because we are members of human race.<br />
               And the human race is filled with passion <br />
@@ -141,21 +141,23 @@ const HomePage = () => {
             </p><br />
             <p>
               Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
-            </p><br />
-            <br />
-            <br />
+            </p>
+
             <h3>-Dead Poet's Society</h3>
           </Col>
           <Col lg={6}></Col>
         </Row>
+      </div>
 
+
+      <div className='section-6 dark-bg'>
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='footer'>
             <Row className='py-2'>
-              <Col lg={4} className='footer-brand'><p>Project Noise</p></Col>
+              <Col lg={4} className='footer-brand px-0'><p>Project Noise</p></Col>
               <Col lg={5}></Col>
-              <Col lg={3}>
+              <Col lg={3} className='px-0'>
                 <Row className='m-0 p-0'>
                   <Col className='text-center'>
                     <FaTwitter size={25} />
