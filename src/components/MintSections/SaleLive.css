@@ -14,6 +14,12 @@ hr{
   transition: none !important;
 }
 
+.close{
+  color: #F5F5F5;
+  background-color: #050505;
+  border: none;
+}
+
 .modal-content{
   height: 100% !important;
 }

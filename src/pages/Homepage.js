@@ -17,18 +17,27 @@ const HomePage = () => {
   return (
     <>
       <div className='section-1 dark-bg'>
-        <Row className='px-3'>
-          <Col lg={3}>
-
-          </Col>
-          <Col lg={6} style={{ position: 'relative' }}>
+        <Row className='px-3 m-0'>
+          <Col lg={3}></Col>
+          {/* <Col lg={6} style={{ position: 'relative' }}>
             <div>
               <img src={LogoWeb} alt='gif' className='gifWeb' />
               <img src={LogoMobile} alt='gif' className='gifMobile' />
             </div>
+            <div className='dummydiv'></div>
             <div className='mintComponent'>
               <SaleLive />
             </div>
+          </Col> */}
+          <Col lg={6} className='main-section m-0 p-0'>
+            <Col lg={9} className='p-0 m-0'>
+              <img src={LogoWeb} alt='gif' className='gifWeb' />
+              <img src={LogoMobile} alt='gif' className='gifMobile' />
+            </Col>
+            <div className='dummydiv'></div>
+            <Col lg={4} className='mintComponent'>
+              <Countdown />
+            </Col>
           </Col>
           <Col lg={3}>
 

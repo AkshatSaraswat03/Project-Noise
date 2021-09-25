@@ -5,7 +5,7 @@ import './learn.css'
 const LearnPage = () => {
   return (
     <div>
-      <Row className='py-5 mb-5'>
+      <Row className='content'>
         <Col></Col>
 
         <Col>

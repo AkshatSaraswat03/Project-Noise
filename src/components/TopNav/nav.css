@@ -13,8 +13,6 @@
   border: none;
 }
 
-
-
 .nav-brand{
   font-size: 20px;
 } 
@@ -73,14 +71,14 @@
     display: none;
   }
   .nav-brand{
-    position: absolute;
-    left: 16px;
-    top: 22.5px;
+    padding: 5px 0px 0px 12px;
   } 
   .navbar-collapse{
     height: 100vh;
     transform: translateY(25%);
   }
+
+
   .home-nav{
     margin-top: 40px;
     padding: 0;
