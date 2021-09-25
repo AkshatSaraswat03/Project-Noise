@@ -11,7 +11,7 @@ const ComingSoon = () => {
       </p>
       <hr />
 
-      <Button variant='secondary' className='btn-primary2 p-3 btn-block'> Cooming Soon </Button>
+      <Button variant='secondary' className='btn-primary2 p-3 btn-block'> Coming Soon </Button>
       <div className='cardDiv m-0 p-2' id='perPieceAmt'>2 SOL per piece</div>
       <div className='cardDiv m-0 p-2' id='pieceLeft'>2,222 piece remaining</div>
 

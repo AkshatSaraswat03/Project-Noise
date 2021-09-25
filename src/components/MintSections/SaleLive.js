@@ -24,8 +24,15 @@ const SaleLive = () => {
           <Row >
             <Col></Col>
             <Col>
-              <h1 className='mt-5 pt-5'>MINT #REF<span className='primary-text'>1</span>ECT</h1>
-              <Button variant='secondary' className='btn-primary btn-block py-3 my-5'>CHECKOUT</Button>
+              <Row>
+
+                <Col lg={1}></Col>
+                <Col>
+                  <h1 className='mt-5 pt-5'>MINT #REF<span className='primary-text'>1</span>ECT</h1>
+                  <Button variant='secondary' className='btn-primary btn-block py-3 my-5'>CHECKOUT</Button>
+                </Col>
+                <Col lg={1}></Col>
+              </Row>
             </Col>
             <Col></Col>
           </Row>

@@ -2,7 +2,8 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap'
 import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
-import Logo from '../assets/Landingweb.gif'
+import LogoWeb from '../assets/Landingweb.gif'
+import LogoMobile from '../assets/Landingmobile.gif'
 import { FaTwitter, FaDiscord } from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
 
@@ -22,7 +23,8 @@ const HomePage = () => {
           </Col>
           <Col lg={6} style={{ position: 'relative' }}>
             <div>
-              <img src={Logo} alt='gif' className='gif' />
+              <img src={LogoWeb} alt='gif' className='gifWeb' />
+              <img src={LogoMobile} alt='gif' className='gifMobile' />
             </div>
             <div className='mintComponent'>
               <SaleLive />
@@ -60,14 +62,13 @@ const HomePage = () => {
           </Col>
 
         </Row>
-        <Row className='px-3 firstrow'>
+        <Row className='firstrow'>
           <Col lg={3}></Col>
           <Col lg={6}>
-            <div className='p-0' style={{ width: 'auto' }}>
-              <Row><h1>WHAT IS PROJECT NOISE?</h1></Row>
-              <Row className='text-end'>
+            <div style={{ width: 'max-content' }}><h1>WHAT IS PROJECT NOISE?</h1>
+              <div className='text-end'>
                 <h6>[Noise is a contronym]</h6>
-              </Row>
+              </div>
             </div>
           </Col>
           <Col lg={3}></Col>
@@ -150,7 +151,7 @@ const HomePage = () => {
       </div>
 
 
-      <div className='section-6 dark-bg'>
+      <div className='section-6 dark-bg px-3'>
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='footer'>

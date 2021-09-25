@@ -1,24 +1,50 @@
+.navbar{
+  position: absolute;
+}
+
+.collapsing{
+  transition: none !important;
+}
+
+.navbar-toggler{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+}
+
+
+
+.nav-brand{
+  font-size: 20px;
+} 
+
 .home-nav{
   color:rgba(255,255,255,.55);
+  font-size: 20px;
 }
 .home-nav:hover {
   color:#FFFFFF !important;
+  font-size: 20px;
 }
-
 
 .gallery-nav{
   color:rgba(255,255,255,.55);
+  font-size: 20px;
 }
 .gallery-nav:hover {
   color:#FFFFFF !important;
+  font-size: 20px;
 }
 
 
 .learn-nav{
   color:rgba(255,255,255,.55);
+  font-size: 20px;
 }
 .learn-nav:hover {
   color:#FFFFFF !important;
+  font-size: 20px;
 }
 
 .active{
@@ -47,17 +73,25 @@
     display: none;
   }
   .nav-brand{
-    visibility: hidden;
-    display: none;
+    position: absolute;
+    left: 16px;
+    top: 22.5px;
+  } 
+  .navbar-collapse{
+    height: 100vh;
+    transform: translateY(25%);
   }
   .home-nav{
-    margin-top: 25px;
+    margin-top: 40px;
+    padding: 0;
   }
   .gallery-nav{
-    margin-top: 25px;
+    margin-top: 40px;
+    padding: 0;
   }
   #wallet-btn{
-    margin: 25px 0 ;
+    margin: 30px 0;
+    padding: 0;
   }
   
 }
