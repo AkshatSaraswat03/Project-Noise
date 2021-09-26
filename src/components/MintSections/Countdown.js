@@ -9,8 +9,8 @@ const Countdown = () => {
       <p>
         The first set of 2,222 art pieces on Solana blockchain exploring noise as a deterministic function.
       </p>
-      <hr />
-      <div className='py-4'>
+      <div className='hr-div'></div>
+      <div className='py-4' style={{ fontSize: '20px' }}>
         Countdown : <span className='time-left primary-text'>22:22:22:22</span>
       </div>
       <Button variant='secondary' className='btn-primary p-3 btn-block'> MINT </Button>

@@ -9,8 +9,8 @@ const ComingSoon = () => {
       <p>
         The first set of 2,222 art pieces on Solana blockchain exploring noise as a deterministic function.
       </p>
-      <hr />
-
+      {/* <hr /> */}
+      <div className='hr-div'></div>
       <Button variant='secondary' className='btn-primary2 p-3 btn-block'> Coming Soon </Button>
       <div className='cardDiv m-0 p-2' id='perPieceAmt'>2 SOL per piece</div>
       <div className='cardDiv m-0 p-2' id='pieceLeft'>2,222 piece remaining</div>

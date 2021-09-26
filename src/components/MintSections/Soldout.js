@@ -9,7 +9,7 @@ const Soldout = () => {
       <p>
         The first set of 2,222 art pieces on Solana blockchain exploring noise as a deterministic function.
       </p>
-      <hr />
+      <div className='hr-div'></div>
       <Button variant='secondary' className='btn-primary2 p-3 btn-block'> View on Solanart.io </Button>
       <div className='soldoutDiv text-center m-0 p-1'>Sold out! </div>
 

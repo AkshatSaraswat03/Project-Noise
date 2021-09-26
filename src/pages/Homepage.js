@@ -19,35 +19,42 @@ const HomePage = () => {
       <div className='section-1 dark-bg'>
         <Row className='px-3 m-0'>
           <Col lg={3}></Col>
-          {/* <Col lg={6} style={{ position: 'relative' }}>
-            <div>
-              <img src={LogoWeb} alt='gif' className='gifWeb' />
-              <img src={LogoMobile} alt='gif' className='gifMobile' />
-            </div>
-            <div className='dummydiv'></div>
-            <div className='mintComponent'>
-              <SaleLive />
+
+          {/* <Col lg={6} className='main-section m-0 p-0'>
+            <img src={LogoWeb} alt='gif' className='gifWeb' />
+            <div className='mintComponent m-0 p-0'>
+              <ComingSoon />
             </div>
           </Col> */}
-          <Col lg={6} className='main-section m-0 p-0'>
-            <Col lg={9} className='p-0 m-0'>
-              <img src={LogoWeb} alt='gif' className='gifWeb' />
-              <img src={LogoMobile} alt='gif' className='gifMobile' />
-            </Col>
-            <div className='dummydiv'></div>
-            <Col lg={4} className='mintComponent'>
-              <SaleLive />
-            </Col>
-          </Col>
-          <Col lg={3}>
 
+          <Col lg={6}>
+            <div className='main-section'>
+              <div className='gifWeb'>
+                <img src={LogoWeb} alt='gif' />
+              </div>
+              <div className='mint-section'>
+                <div className='mint-container'>
+                  <ComingSoon />
+                </div>
+              </div>
+            </div>
           </Col>
+          <Col lg={6} className='mobile-section m-0 p-0'>
+            <div className='mobileGifComponent'>
+              <img src={LogoMobile} alt='gif' className='gifMobile' />
+            </div>
+            <div className='mobileMintComponent p-0'>
+              <ComingSoon />
+            </div>
+          </Col>
+
+          <Col lg={3}></Col>
         </Row>
       </div>
 
       <div className='section-2'>
         <Row className='px-3 py-0'>
-          <Col lg={3}></Col>
+          <Col lg={3} className='p-0'></Col>
           <Col lg={6} className='p-0'>
             <h1 className='primary-text'>"Not deliberate, not random.</h1>
             <h1 className='primary-text'>Some place in between."</h1>
@@ -58,7 +65,7 @@ const HomePage = () => {
               <p>And these moments, we present to you.</p>
             </div>
           </Col>
-          <Col lg={3}></Col>
+          <Col lg={3} className='p-0'></Col>
         </Row>
 
       </div>
@@ -75,7 +82,7 @@ const HomePage = () => {
           <Col lg={3}></Col>
           <Col lg={6}>
             <div style={{ width: 'max-content', maxWidth: '90vw' }}><h1>WHAT IS PROJECT NOISE?</h1>
-              <div className='text-end' style={{ maxWidth: '90vw' }}>
+              <div className='subheading' style={{ maxWidth: '90vw' }}>
                 <h6>[Noise is a contronym]</h6>
               </div>
             </div>
@@ -83,9 +90,9 @@ const HomePage = () => {
           <Col lg={3}></Col>
         </Row>
 
-        <Row className='px-3'>
+        <Row className='px-3 m-0'>
           <Col lg={3}></Col>
-          <Col lg={3}>
+          <Col lg={3} className='p-0'>
             <p>
               Project noise embarks on a quest to reaffirm art for art's sake into the metaverse. Dissolving the noise around and bringing a clean sensory exxperience together.
             </p>
@@ -163,8 +170,8 @@ const HomePage = () => {
       <div className='section-6 dark-bg px-3'>
         <Row>
           <Col lg={3}></Col>
-          <Col lg={6} className='footer pt-0'>
-            <Row className='py-2'>
+          <Col lg={6} className='footer pt-2'>
+            <Row className='pt-2 pb-0'>
               <Col lg={4} className='footer-brand px-0'><p>Project Noise</p></Col>
               <Col lg={5}></Col>
               <Col lg={3} className='px-0'>

@@ -13,8 +13,8 @@ const SaleLive = () => {
       <p>
         The first set of 2,222 art pieces on Solana blockchain exploring noise as a deterministic function.
       </p>
-      <hr />
-      <div className='py-2 primary-text'>Sale Live!</div>
+      <div className='hr-div'></div>
+      <div className='py-2 primary-text' style={{ fontSize: '20px' }}>Sale Live!</div>
       <Button variant='secondary' className='btn-primary p-3 btn-block' onClick={() => setShow(true)}> MINT </Button>
       <Modal show={show} fullscreen='true' onHide={() => setShow(false)}>
         <Modal.Header closeButton className='custom'>

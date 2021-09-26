@@ -118,6 +118,7 @@ p{
   border-radius: 0 !important;
   background-color: #040404 !important;
   font-size: 20px;
+  padding: 20px 24px;
 }
 
 .btn-outline:hover{
@@ -128,6 +129,7 @@ p{
   border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00) !important;
   border-image-slice: 1 !important;
   font-size: 20px;
+  padding: 20px 24px;
 }
 
 .btn-outline:active{
@@ -138,6 +140,7 @@ p{
   border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00) !important;
   border-image-slice: 1 !important;
   font-size: 20px;
+  padding: 20px 24px;
 }
 
 .btn-outline-connected{
@@ -148,6 +151,7 @@ p{
   border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00);
   border-image-slice: 1;
   font-size: 20px;
+  padding: 20px 24px;
 }
 
 
@@ -172,5 +176,6 @@ p{
   }
   p{
     font-size: 18px !important;
+    line-height: 20px !important;
   }
 }
