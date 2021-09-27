@@ -171,19 +171,19 @@ const HomePage = () => {
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='footer pt-2'>
-            <Row className='pt-2 pb-0'>
+            <Row className='pt-2 pb-2'>
               <Col lg={4} className='footer-brand px-0'><p>Project Noise</p></Col>
               <Col lg={5}></Col>
               <Col lg={3} className='px-0'>
                 <Row className='m-0 p-0'>
                   <Col className='text-center'>
-                    <FaTwitter size={25} />
+                    <FaTwitter size={30} />
                   </Col>
                   <Col className='text-center'>
-                    <RiInstagramFill size={25} />
+                    <RiInstagramFill size={30} />
                   </Col>
                   <Col className='text-center'>
-                    <FaDiscord size={25} />
+                    <FaDiscord size={30} />
                   </Col>
                 </Row>
               </Col>

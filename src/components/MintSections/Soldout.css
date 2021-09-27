@@ -1,8 +1,12 @@
-.card h1{
+.mintCard{
+  background: transparent !important;
+}
+
+.mintCard h1{
   margin-bottom: 36px;
 }
 
-.card p{
+.mintCard p{
   margin: 0;
   color: #ffffff;
 }

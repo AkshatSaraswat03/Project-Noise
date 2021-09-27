@@ -6,9 +6,9 @@ const LearnPage = () => {
   return (
     <div>
       <Row className='content'>
-        <Col></Col>
+        <Col lg={3}></Col>
 
-        <Col>
+        <Col className='px-3'>
           <h2>How to Mint</h2>
           <p>
             If you enjoy the style of a work
@@ -79,8 +79,8 @@ const LearnPage = () => {
             Discord
           </p>
         </Col>
-        <Col></Col>
-        <Col></Col>
+        <Col lg={3}></Col>
+        <Col lg={3}></Col>
       </Row>
     </div>
   );
