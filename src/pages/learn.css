@@ -1,17 +1,43 @@
-.content p{
-  font-size: 20px;
-  color: rgba(0, 0, 0, 1) !important;
+.learn-content p{
+  font-size: 18px !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+  margin: 0;
 }
 
-.content{
-  margin: 110px 0px 270px 0px;
+.learn-content{
+  margin: 170px 0px 90px 0px;
 }
-.content h2{
+.learn-content h2{
   margin: 60px 0px 28px 0px;
 }
 
+ul{
+  margin: 0;
+}
+
+li{
+  padding: 24px 0px 14px 0px;
+  margin: 0;
+}
+
+.subheading{
+  padding-bottom: 24px;
+}
+.division-div{
+  margin: 80px 0px;
+  height: 3px !important;
+  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
+}
+
+.learn-content h4{
+  /* font-weight: bold; */
+}
+.learn-content h5{
+  /* font-weight: bold; */
+}
+
 @media screen and (max-width: 600px) {
-  .content{
+  .learn-content{
     margin: 75px 0px 240px 0px; 
   }
 }

@@ -24,24 +24,31 @@
 
 .nav-brand{
   font-size: 20px;
+  padding: 8px 18px 8px 0px;
 } 
 
 .home-nav{
   color:rgba(255,255,255,.55);
   font-size: 20px;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
 }
 .home-nav:hover {
   color:#FFFFFF !important;
   font-size: 20px;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
 }
 
 .gallery-nav{
   color:rgba(255,255,255,.55);
   font-size: 20px;
+  padding: 8px 18px;
 }
 .gallery-nav:hover {
   color:#FFFFFF !important;
   font-size: 20px;
+  padding: 8px 18px;
 }
 
 .nav-link{
@@ -52,10 +59,12 @@
 .learn-nav{
   color:rgba(255,255,255,.55);
   font-size: 20px;
+  padding-left: 18px !important;
 }
 .learn-nav:hover {
   color:#FFFFFF !important;
   font-size: 20px;
+  padding-left: 18px !important;
 }
 
 .active-nav{
@@ -67,28 +76,82 @@
   color: rgba(255,255,255,.55) !important;
 }
 
-.twitter{
-  color: #FFFFFF !important;
+.social-media-twitter{
+  padding-top: 20px;
+}
+.social-media-insta{
+  padding-top: 18px;
+}
+.social-media-discord{
+  padding-top: 22px;
 }
 
-/* .twitter:hover{
-  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-} */
+
+.twitter{
+  height: 23px;
+  width: 29px;
+  background-image: url('../../assets/twitter.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.twitter:hover{
+  height: 23px;
+  width: 29px;
+  background-image: url('../../assets/twitteractive.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .instagram{
-  color: #FFFFFF !important;
+  height: 28px;
+  width: 28px;
+  background-image: url('../../assets/insta.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+.instagram:hover{
+  height: 28px;
+  width: 28px;
+  background-image: url('../../assets/instaactive.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.discord{
+  height: 22px;
+  width: 29px;
+  background-image: url('../../assets/discord.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+.discord:hover{
+  height: 22px;
+  width: 29px;
+  background-image: url('../../assets/discordactive.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.discord{
-  color: #FFFFFF !important;
-}
-/* .discord:active{
-  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-} */
 
 
 @media screen and (max-width: 600px) {

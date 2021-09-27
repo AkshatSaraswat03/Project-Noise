@@ -1,11 +1,9 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Nav } from 'react-bootstrap'
 import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
 import LogoWeb from '../assets/Landingweb.gif'
 import LogoMobile from '../assets/Landingmobile.gif'
-import { FaTwitter, FaDiscord } from 'react-icons/fa'
-import { RiInstagramFill } from 'react-icons/ri'
 
 import ComingSoon from '../components/MintSections/ComingSoon';
 import Countdown from '../components/MintSections/Countdown';
@@ -19,13 +17,6 @@ const HomePage = () => {
       <div className='section-1 dark-bg'>
         <Row className='px-3 m-0'>
           <Col lg={3}></Col>
-
-          {/* <Col lg={6} className='main-section m-0 p-0'>
-            <img src={LogoWeb} alt='gif' className='gifWeb' />
-            <div className='mintComponent m-0 p-0'>
-              <ComingSoon />
-            </div>
-          </Col> */}
 
           <Col lg={6}>
             <div className='main-section'>
@@ -58,11 +49,11 @@ const HomePage = () => {
           <Col lg={6} className='p-0'>
             <h1 className='primary-text'>"Not deliberate, not random.</h1>
             <h1 className='primary-text'>Some place in between."</h1>
-            <h3>-Ex Machina</h3>
+            <h5>- Nathan, Ex Machina</h5>
             <div className='m-0'>
-              <p>Giving up the control, to achieve that place in between is our dilemma</p>
-              <p>The filemma - which gives rise to provoking uncertain moments in the Cartesian space.</p>
-              <p>And these moments, we present to you.</p>
+              <p>Giving up control to achieve that place "in between" is our dilemma</p>
+              <p>The dilemma - which gives rise to fascinating uncertain moments in the Cartesian plane.</p>
+              <p>Here, we present to you, these moments.</p>
             </div>
           </Col>
           <Col lg={3} className='p-0'></Col>
@@ -82,7 +73,7 @@ const HomePage = () => {
           <Col lg={3}></Col>
           <Col lg={6}>
             <div style={{ width: 'max-content', maxWidth: '90vw' }}><h1>WHAT IS PROJECT NOISE?</h1>
-              <div className='subheading' style={{ maxWidth: '90vw' }}>
+              <div style={{ maxWidth: '90vw' }}>
                 <h6>[Noise is a contronym]</h6>
               </div>
             </div>
@@ -92,18 +83,20 @@ const HomePage = () => {
 
         <Row className='px-3 m-0'>
           <Col lg={3}></Col>
-          <Col lg={3} className='p-0'>
+          <Col lg={6} className='p-0'>
             <p>
-              Project noise embarks on a quest to reaffirm art for art's sake into the metaverse. Dissolving the noise around and bringing a clean sensory exxperience together.
+              Project noise is an art collective, embarking on a quest to reaffirm the idea of "art for art's sake." It dissolves the noise around and brings a clean sensory experience for the viewer.            </p>
+            <p>
+              Devoid of any social constructs, it celebrates the human desire to create and to express.
             </p>
             <p>
-              Devoid of any social constructs, it celebrates art as a medium of generating ecstasy.
+              The journey will be broken down into different curations. Each curation will explore the overarching theme of 'chaos theory.'
             </p>
             <p>
-              Eah series will explore the parameters of chaos theory, seeking an organic but controlled experiment with innumerable unique possibilities.
+              Organic but controlled experiments with innumerable yet unique possibilities.
             </p>
           </Col>
-          <Col lg={6}></Col>
+          <Col lg={3}></Col>
         </Row>
 
         <Row className='px-3'>
@@ -117,18 +110,19 @@ const HomePage = () => {
 
         <Row className='px-3'>
           <Col lg={3}></Col>
-          <Col lg={3}>
+          <Col lg={6}>
             <p>
-              2,222 Unique synaesthetic pieces instigating touch and sound stimuli through visual media.
+              REF1ECT is the first of many curations coming ahead. This series is conceived by Project Noise itself.
             </p>
             <p>
-              Here, the physics of implosion is explored to create a dynamic movement on the canvas, mimicking the life force of nature.
+              2222 unique synaesthetic artworks stored immutably on Solana blockchain.
+              REF1ECT, dives into the physics of H2O, mimicking its movement through the space guided by the life force of nature. This movement is captured and projected onto a canvas, thus freezing it for eternity.
             </p>
             <p>
-              And the conscious is punctured by the unconscious at random intervals.
+              And, in the process of creation, the conscious is punctured by the unconscious at random intervals.
             </p>
           </Col>
-          <Col lg={6}></Col>
+          <Col lg={3}></Col>
         </Row>
 
       </div>
@@ -144,7 +138,7 @@ const HomePage = () => {
       <div className='section-5 dark-bg'>
         <Row className='px-3'>
           <Col lg={3}></Col>
-          <Col lg={3}>
+          <Col lg={6}>
             <Logo2Svg />
 
             <h1 className='m-0'>WHY ART?</h1>
@@ -152,17 +146,17 @@ const HomePage = () => {
               "We don't read and write poetry because it's cute. We read and write poetry because we are members of human race.<br />
               And the human race is filled with passion <br />
               And medicine, law, buisness, engineering, these are noble pursuits and necessary to sustain life.
-            </p><br />
+            </p>
             <p>
               But poetry, beauty, romance, love, these are what we stay alive for. To quote from Whitman "O me! O life!... of the questions of thsese recurring; of the endless trains of the faithless... of cities filled with the foolish; what good amid these, O me, O life?"
-            </p><br />
+            </p>
             <p>
               Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
             </p>
 
-            <h3>-Dead Poet's Society</h3>
+            <h5>-Dead Poet's Society</h5>
           </Col>
-          <Col lg={6}></Col>
+          <Col lg={3}></Col>
         </Row>
       </div>
 
@@ -170,20 +164,18 @@ const HomePage = () => {
       <div className='section-6 dark-bg px-3'>
         <Row>
           <Col lg={3}></Col>
-          <Col lg={6} className='footer pt-2'>
-            <Row className='pt-2 pb-2'>
-              <Col lg={4} className='footer-brand px-0'><p>Project Noise</p></Col>
+          <Col lg={6} className='footer pt-0'>
+            <Row className='pt-0 pb-2'>
+              <Col lg={4} className='footer-brand pt-3 px-0'><p style={{ color: 'white' }}>Project Noise</p></Col>
               <Col lg={5}></Col>
               <Col lg={3} className='px-0'>
                 <Row className='m-0 p-0'>
+                  <Col lg={3}></Col>
                   <Col className='text-center'>
-                    <FaTwitter size={30} />
+                    <Nav.Link className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
                   </Col>
                   <Col className='text-center'>
-                    <RiInstagramFill size={30} />
-                  </Col>
-                  <Col className='text-center'>
-                    <FaDiscord size={30} />
+                    <Nav.Link className='social-media-discord'><div className='discord' ></div></Nav.Link>
                   </Col>
                 </Row>
               </Col>

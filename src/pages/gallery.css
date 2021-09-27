@@ -1,0 +1,16 @@
+.content{
+  margin: 170px 0px 60px 0px;
+}
+
+.sticky-row{
+  position: sticky;
+  top: 0px;
+}
+
+.numberOfPieces{
+  width: 100%;
+  text-align: right;
+  border-bottom: solid 2px transparent !important;
+  border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00) !important;
+  border-image-slice: 1 !important;
+}

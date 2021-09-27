@@ -64,7 +64,7 @@
   border-image-slice: 1;
 }
 
-.section-2 h3{
+.section-2 h5{
   padding-top: 12px;
   margin: 0;
 }
@@ -91,7 +91,7 @@
 }
 
 .section-3 h4{
-  padding-top: 88px;
+  padding-top: 80px;
 }
 .reflect{
   padding-bottom: 48px;
@@ -101,9 +101,6 @@
   padding: 48px 24px;
 }
 
-.subheading{
-  float: right;
-}
 
 
 
@@ -137,7 +134,7 @@
   padding: 48px 0;
 }
 
-.section-5 h3{
+.section-5 h5{
   padding-top: 48px;
 }
 
@@ -148,6 +145,7 @@
   border-image-slice: 1;
   padding-top: 10px;
 }
+
 
 @media screen and (max-width: 600px) {
   .footer-brand {
