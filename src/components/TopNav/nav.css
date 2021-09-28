@@ -27,17 +27,29 @@
   padding: 8px 18px 8px 0px;
 } 
 
+
+.nav-link{
+  padding: 18px 8px 5px 8px;
+  margin-bottom: 18px;
+}
+
 .home-nav{
   color:rgba(255,255,255,.55);
   font-size: 20px;
-  padding-left: 18px !important;
-  padding-right: 18px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: 18px !important;
+  margin-right: 18px !important;
 }
 .home-nav:hover {
   color:#FFFFFF !important;
   font-size: 20px;
-  padding-left: 18px !important;
-  padding-right: 18px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: 18px !important;
+  margin-right: 18px !important;
 }
 
 .gallery-nav{
@@ -51,20 +63,23 @@
   padding: 8px 18px;
 }
 
-.nav-link{
-  padding: 18px 8px;
-}
 
 
 .learn-nav{
   color:rgba(255,255,255,.55);
   font-size: 20px;
-  padding-left: 18px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: 18px !important;
 }
 .learn-nav:hover {
   color:#FFFFFF !important;
   font-size: 20px;
-  padding-left: 18px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: 18px !important;
 }
 
 .active-nav{

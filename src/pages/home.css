@@ -142,6 +142,19 @@
 
 }
 
+.carousel-col{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homecarousel ul {
+  height: 532px;
+}
+
+.homecarousel li{
+  text-align: center;
+}
+
 .footer{
   
   padding-top: 10px;

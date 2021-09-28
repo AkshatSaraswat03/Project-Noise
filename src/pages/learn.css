@@ -51,4 +51,7 @@ li{
   ul{
     padding-left: 16px;
   }
+  .division-div{
+    margin: 40px 0px !important;
+  }
 }

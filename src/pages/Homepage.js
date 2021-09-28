@@ -91,7 +91,7 @@ const HomePage = () => {
               Devoid of any social constructs, it celebrates the human desire to create and to express.
             </p>
             <p>
-              The journey will be broken down into different curations. Each curation will explore the overarching theme of 'chaos theory.'
+              The journey will be broken down into different curations. Each curation will explore the overarching theme of '<span><a href='https://en.wikipedia.org/wiki/Chaos_theory' className='primary-text'>Chaos Theory</a></span>.'
             </p>
             <p>
               Organic but controlled experiments with innumerable yet unique possibilities.
@@ -164,7 +164,7 @@ const HomePage = () => {
       <div className='light-bg section-6 px-3'>
         <Row>
           <Col lg={3}></Col>
-          <Col lg={6}>
+          <Col lg={6} className='carousel-col'>
             <HomeCarousel />
           </Col>
           <Col lg={3}></Col>

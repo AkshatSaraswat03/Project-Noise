@@ -7,6 +7,43 @@ import carousel3 from '../../assets/carousel3.png'
 import carousel4 from '../../assets/carousel4.png'
 import carousel5 from '../../assets/carousel5.png'
 import carousel6 from '../../assets/carousel6.png'
+import { ReactComponent as rightArrow } from '../../assets/rightarrow.svg'
+import { ReactComponent as leftArrow } from '../../assets/leftarrow.svg'
+
+function CustomLeftArrow({ onClick }) {
+  function handleClick() {
+    console.log('Left button clicked, go to next slide');
+    onClick();
+  }
+
+  return (
+    <button
+      onClick={handleClick}
+      aria-label="Go to previous slide"
+      className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left"
+    >
+      <leftArrow className='left' />
+    </button>
+  );
+}
+
+
+function CustomRightArrow({ onClick }) {
+  function handleClick() {
+    console.log('Right button clicked, go to next slide');
+    onClick();
+  }
+
+  return (
+    <button
+      onClick={handleClick}
+      aria-label="Go to next slide"
+      className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right"
+    >
+      <rightArrow className='right' />
+    </button>
+  );
+}
 
 
 const HomeCarousel = () => {
@@ -46,23 +83,22 @@ const HomeCarousel = () => {
         swipeable={true}
         draggable={false}
         responsive={responsive}
-        // ssr={true} 
-        // partialVisible={true}
+        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow />}
+        // centerMode={true}
         infinite={true}
         keyBoardControl={true}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType="Desktop"
-        itemClass="carousel-item-padding-40-px"
         className='homecarousel'
       >
         {img.map((image, index) => {
           return (
-            <div key={index} style={{ position: "relative" }}>
+            <div key={index} className='carousel-img'>
               <img
                 draggable={false}
                 alt="text"
-                style={{ width: "100%", height: "100%" }}
                 src={image}
               />
             </div>
