@@ -3,13 +3,37 @@
 }
 
 
-/* 
-.abcd g{
-  fill: red;
-} */
+.react-multiple-carousel__arrow{
+  background: transparent;
+}
+.react-multiple-carousel__arrow:hover{
+  background: rgba(0,0,0,0.4);
 
-.carousel-img{
-  margin-top: -110px;
+}
+
+.left-arrow{
+  opacity: 0.4;
+  width: 15px;
+}
+.left-arrow:hover{
+  opacity: 1;
+}
+.right-arrow{
+  opacity: 0.4;
+  width: 15px;
+}
+.right-arrow:hover{
+  opacity: 1;
+}
+
+.react-multiple-carousel__arrow--left::before {
+  display: none;
+  visibility: hidden;
+}
+
+.react-multiple-carousel__arrow--right::before {
+  display: none;
+  visibility: hidden;
 }
 
 
@@ -17,4 +41,5 @@
   .homecarousel{
     height: 564px !important;
   }
+
 }

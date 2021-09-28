@@ -51,11 +51,11 @@ const TopNav = () => {
                 <Row>
                   <Col className='dummyNavCol'></Col>
                   <Col >
-                    <Nav.Link className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
+                    <Nav.Link href='https://twitter.com/Prjctnoise' className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
                   </Col>
 
                   <Col >
-                    <Nav.Link className='social-media-discord'><div className='discord' ></div></Nav.Link>
+                    <Nav.Link href='https://discord.gg/2AXCqUWX5J' className='social-media-discord'><div className='discord' ></div></Nav.Link>
                   </Col>
                 </Row>
               </Nav>

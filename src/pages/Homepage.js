@@ -116,7 +116,7 @@ const HomePage = () => {
               REF1ECT is the first of many curations coming ahead. This series is conceived by Project Noise itself.
             </p>
             <p>
-              2222 unique synaesthetic artworks stored immutably on Solana blockchain.
+              2,222 unique synaesthetic artworks stored immutably on Solana blockchain.
               REF1ECT, dives into the physics of H2O, mimicking its movement through the space guided by the life force of nature. This movement is captured and projected onto a canvas, thus freezing it for eternity.
             </p>
             <p>
@@ -133,6 +133,7 @@ const HomePage = () => {
         </Row>
         <Row className='section4-row2'>
           <Col><h1>ART.</h1></Col>
+          <div>Just Kidding, read about our roadmap <a href='/learn'>here</a>.</div>
         </Row>
       </div>
 
@@ -183,10 +184,10 @@ const HomePage = () => {
                 <Row className='m-0 p-0'>
                   <Col lg={3}></Col>
                   <Col className='text-center'>
-                    <Nav.Link className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
+                    <Nav.Link href='https://twitter.com/Prjctnoise' className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
                   </Col>
                   <Col className='text-center'>
-                    <Nav.Link className='social-media-discord'><div className='discord' ></div></Nav.Link>
+                    <Nav.Link href='https://discord.gg/2AXCqUWX5J' className='social-media-discord'><div className='discord' ></div></Nav.Link>
                   </Col>
                 </Row>
               </Col>

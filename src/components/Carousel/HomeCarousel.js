@@ -7,8 +7,8 @@ import carousel3 from '../../assets/carousel3.png'
 import carousel4 from '../../assets/carousel4.png'
 import carousel5 from '../../assets/carousel5.png'
 import carousel6 from '../../assets/carousel6.png'
-import { ReactComponent as rightArrow } from '../../assets/rightarrow.svg'
-import { ReactComponent as leftArrow } from '../../assets/leftarrow.svg'
+import rightArrow from '../../assets/rightarrow.png'
+import leftArrow from '../../assets/leftarrow.png'
 
 function CustomLeftArrow({ onClick }) {
   function handleClick() {
@@ -22,7 +22,7 @@ function CustomLeftArrow({ onClick }) {
       aria-label="Go to previous slide"
       className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left"
     >
-      <leftArrow className='left' />
+      <img src={leftArrow} className='left-arrow' alt='prev' />
     </button>
   );
 }
@@ -40,7 +40,7 @@ function CustomRightArrow({ onClick }) {
       aria-label="Go to next slide"
       className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right"
     >
-      <rightArrow className='right' />
+      <img src={rightArrow} className='right-arrow' alt='next' />
     </button>
   );
 }
@@ -91,15 +91,17 @@ const HomeCarousel = () => {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType="Desktop"
+        itemClass="carousel-item-padding-40-px"
         className='homecarousel'
       >
         {img.map((image, index) => {
           return (
-            <div key={index} className='carousel-img'>
+            <div key={index} style={{ position: "relative" }} className='carousel-img'>
               <img
                 draggable={false}
                 alt="text"
                 src={image}
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
           );

@@ -122,6 +122,9 @@
 .section4-row2{
   margin: 0;
 }
+.section4-row2 a{
+  color: #000000;
+}
 
 
 /* section-5 */
@@ -142,21 +145,20 @@
 
 }
 
-.carousel-col{
+ .carousel-col{
   margin-left: auto;
   margin-right: auto;
 }
 
-.homecarousel ul {
+/* .homecarousel ul {
   height: 532px;
-}
+} */
 
 .homecarousel li{
   text-align: center;
-}
+} 
 
 .footer{
-  
   padding-top: 10px;
 }
 
@@ -219,4 +221,5 @@
   p{
     font-size: 18px !important;
   }
+
 }
