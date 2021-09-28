@@ -86,12 +86,12 @@ const HomePage = () => {
           <Col lg={3}></Col>
           <Col lg={6} className='p-0'>
             <p>
-              Project noise is an art collective, embarking on a quest to reaffirm the idea of "art for art's sake." It dissolves the noise around and brings a clean sensory experience for the viewer.            </p>
+              Project noise is an art collective, embarking on a quest to reaffirm the idea of "art for art's sake." It dissolves the noise around and brings a clean sensory experience for the viewer.</p>
             <p>
               Devoid of any social constructs, it celebrates the human desire to create and to express.
             </p>
             <p>
-              The journey will be broken down into different curations. Each curation will explore the overarching theme of '<span><a href='https://en.wikipedia.org/wiki/Chaos_theory' className='primary-text'>Chaos Theory</a></span>.'
+              The journey will be broken down into different curations. Each curation will explore the overarching theme of '<span><a href='https://en.wikipedia.org/wiki/Chaos_theory' className='primary-text'>Chaos Theory</a></span>'.
             </p>
             <p>
               Organic but controlled experiments with innumerable yet unique possibilities.
@@ -133,7 +133,7 @@ const HomePage = () => {
         </Row>
         <Row className='section4-row2'>
           <Col><h1>ART.</h1></Col>
-          <div>Just Kidding, read about our roadmap <a href='/learn'>here</a>.</div>
+          <div>Just kidding, read about our roadmap <a href='/learn'>here</a>.</div>
         </Row>
       </div>
 
@@ -156,7 +156,7 @@ const HomePage = () => {
               Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
             </p>
 
-            <h5>-Dead Poet's Society</h5>
+            <h5>-John Keating, Dead Poets Society</h5>
           </Col>
           <Col lg={3}></Col>
         </Row>

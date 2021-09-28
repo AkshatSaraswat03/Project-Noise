@@ -72,6 +72,7 @@
   padding-right: 0 !important;
   padding-bottom: 0 !important;
   margin-left: 18px !important;
+  margin-right: 18px !important;
 }
 .learn-nav:hover {
   color:#FFFFFF !important;
@@ -79,6 +80,7 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
   padding-bottom: 0 !important;
+  margin-right: 18px !important;
   margin-left: 18px !important;
 }
 
@@ -183,6 +185,17 @@
   .home-nav{
     margin-top: 40px;
     padding: 0;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 24px;
+  }
+  .home-nav:active{
+    margin-top: 40px;
+    padding: 0;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
     font-size: 24px;
   }
   .gallery-nav{
@@ -193,6 +206,17 @@
   .learn-nav{
     margin-top: 40px;
     padding: 0;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 24px;
+  }
+  .learn-nav:active{
+    margin-top: 40px;
+    padding: 0;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
     font-size: 24px;
   }
   #wallet-btn{

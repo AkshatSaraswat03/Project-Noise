@@ -10,7 +10,7 @@ const LearnPage = () => {
 
         <Col lg={6} className='px-3'>
           <h4>THE BIG PICTURE</h4>
-          <h5>(Membership, Marketplace, Community wallet, DAO)</h5>
+          <h5>(Membership, Marketplace, Community wallet & DAO)</h5>
           <ul>
             <li><u><h5>Project Noise Collectors Club</h5></u></li>
           </ul>

@@ -25,6 +25,8 @@
   background-color: #2b2b2b;
   color: #ffffff;
   font-size: 14px;
+  padding: 8px 18px !important;
+  opacity: 0.7;
 }
 
 #perPieceAmt{
