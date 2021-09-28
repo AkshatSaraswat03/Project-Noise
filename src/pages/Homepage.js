@@ -4,6 +4,7 @@ import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
 import LogoWeb from '../assets/Landingweb.gif'
 import LogoMobile from '../assets/Landingmobile.gif'
+import HomeCarousel from '../components/Carousel/HomeCarousel';
 
 import ComingSoon from '../components/MintSections/ComingSoon';
 import Countdown from '../components/MintSections/Countdown';
@@ -160,13 +161,23 @@ const HomePage = () => {
         </Row>
       </div>
 
-
-      <div className='section-6 dark-bg px-3'>
+      <div className='light-bg section-6 px-3'>
         <Row>
           <Col lg={3}></Col>
-          <Col lg={6} className='footer pt-0'>
+          <Col lg={6}>
+            <HomeCarousel />
+          </Col>
+          <Col lg={3}></Col>
+        </Row>
+      </div>
+
+
+      <div className='section-7 dark-bg px-3'>
+        <Row>
+          <Col lg={3}></Col>
+          <Col lg={6} className='footer pt-1'>
             <Row className='pt-0 pb-2'>
-              <Col lg={4} className='footer-brand pt-3 px-0'><p style={{ color: 'white' }}>Project Noise</p></Col>
+              <Col lg={4} className='footer-brand pt-4 px-0'><p style={{ color: 'white' }}>Project Noise</p></Col>
               <Col lg={5}></Col>
               <Col lg={3} className='px-0'>
                 <Row className='m-0 p-0'>
@@ -183,7 +194,6 @@ const HomePage = () => {
           </Col>
           <Col lg={3}></Col>
         </Row>
-
       </div>
 
     </>

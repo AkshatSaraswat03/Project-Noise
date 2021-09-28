@@ -138,11 +138,12 @@
   padding-top: 48px;
 }
 
+.section-6{
+
+}
 
 .footer{
-  border-top: solid 2px transparent;
-  border-image: linear-gradient(30deg, #0EFFB7, #FF130D, #FFFF00);
-  border-image-slice: 1;
+  
   padding-top: 10px;
 }
 

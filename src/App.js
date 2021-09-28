@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/Homepage';
 import LearnPage from './pages/LearnPage';
 import GalleryPage from './pages/GalleryPage';
-
+import HomeCarousel from './components/Carousel/HomeCarousel';
 function App() {
   return (
     <Router>
@@ -17,6 +17,7 @@ function App() {
         <Route exact path='/learn' component={LearnPage} />
       </Switch>
     </Router>
+
   );
 }
 

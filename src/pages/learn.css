@@ -11,6 +11,12 @@
   margin: 60px 0px 28px 0px;
 }
 
+.learn-content a{
+  border-bottom: solid 2px transparent;
+  border-image: linear-gradient(30deg, #0EFFB7, #FF130D, #FFFF00);
+  border-image-slice: 1;
+}
+
 ul{
   margin: 0;
 }
@@ -31,13 +37,18 @@ li{
 
 .learn-content h4{
   /* font-weight: bold; */
+  width: 100%;
 }
 .learn-content h5{
   /* font-weight: bold; */
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
   .learn-content{
-    margin: 75px 0px 240px 0px; 
+    margin: 120px 0px 100px 0px; 
+  }
+  ul{
+    padding-left: 16px;
   }
 }

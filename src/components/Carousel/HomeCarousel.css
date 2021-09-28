@@ -1,0 +1,10 @@
+.homecarousel{
+  height: 664px !important;
+}
+
+
+@media screen and (max-width: 600px) {
+  .homecarousel{
+    height: 564px !important;
+  }
+}

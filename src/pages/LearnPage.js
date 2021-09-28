@@ -55,7 +55,7 @@ const LearnPage = () => {
             If you resonate with the language of artworks presented by Project Noise, you can mint a unique piece for yourself, here. The minting date and time will be specified on the landing page itself. Tokens will be available on a first-come-first-serve basis, and each wallet can mint one piece per transaction.
           </p><br />
           <p>
-            To mint, you will first need a Solana compatible wallet like phantom, solflare, etc. If not already installed, you can find the instructions here. Then, you will need some Solana in the wallet which can be purchased from a decentralized exchange or any of the famous exchanges like Coinbase, Binance, FTX, and more.
+            To mint, you will first need a Solana compatible wallet like phantom, solflare, etc. If not already installed, you can find the instructions <span><a href='' className='primary-text'>here</a></span>. Then, you will need some Solana in the wallet which can be purchased from a decentralized exchange or any of the famous exchanges like Coinbase, Binance, FTX, and more.
           </p><br />
           <p>
             With the wallet installed and some SOL in place, visit the landing page and connect your wallet via the "connect wallet" option on the top right corner of your screen.
@@ -68,7 +68,7 @@ const LearnPage = () => {
 
           <h4 className='subheading'>More Info</h4>
           <p>
-            For more information please reach out to us on Twitter or join the conversation in Discord.
+            For more information please reach out to us on <span><a href='' className='primary-text'>Twitter</a></span> or join the conversation in <span><a href='' className='primary-text'>Discord</a></span>.
           </p>
         </Col>
         <Col></Col>
