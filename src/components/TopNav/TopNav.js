@@ -30,7 +30,7 @@ const TopNav = () => {
       <Navbar collapseOnSelect expand="lg" variant="dark" className='py-3 dark-bg navbar' fixed="top">
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand className='primary-text nav-brand '>Project Noise</Navbar.Brand>
+            <Navbar.Brand onClick={() => { homebtnselected() }} className='primary-text nav-brand '>Project Noise</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <div style={{ width: '100%' }}>
