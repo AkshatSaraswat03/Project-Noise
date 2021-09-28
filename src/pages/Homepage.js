@@ -133,7 +133,7 @@ const HomePage = () => {
         </Row>
         <Row className='section4-row2'>
           <Col><h1>ART.</h1></Col>
-          <div>Just kidding, read about our roadmap <a href='/learn'>here</a>.</div>
+          <div>More about our roadmap <a href='/learn'>here</a>.</div>
         </Row>
       </div>
 

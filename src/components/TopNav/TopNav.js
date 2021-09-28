@@ -47,7 +47,7 @@ const TopNav = () => {
                 </LinkContainer>
               </Nav>
               <Nav>
-                <Button variant='secondary' className='ml-4 mr-2 btn-outline' id='wallet-btn'>Connect Wallet</Button>
+                {/* <Button variant='secondary' className='ml-4 mr-2 btn-outline' id='wallet-btn'>Connect Wallet</Button> */}
                 <Row>
                   <Col className='dummyNavCol'></Col>
                   <Col >
