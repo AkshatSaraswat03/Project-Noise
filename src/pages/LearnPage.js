@@ -42,7 +42,7 @@ const LearnPage = () => {
             <li><u><h5>Generative Art Marketplace</h5></u></li>
           </ul>
           <p>
-            We will be launching a generative art marketplace, thus providing the rising talents to host their works.
+            We will be launching a generative art marketplace, thus giving opportunity to rising talents in hosting their works.
           </p>
 
           <div className='division-div'></div>
