@@ -38,6 +38,16 @@
   visibility: hidden;
 }
 
+.react-multi-carousel-dot button{
+  border:none;
+  background: #040404;
+  opacity: 0.15;
+}
+.react-multi-carousel-dot--active button{
+  background: #040404 !important;
+  opacity: 1 ;
+}
+
 
 @media screen and (max-width: 812px) {
   .homecarousel{
