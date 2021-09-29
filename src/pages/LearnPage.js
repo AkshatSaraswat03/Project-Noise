@@ -10,20 +10,25 @@ const LearnPage = () => {
 
         <Col lg={6} className='px-3'>
           <h4>THE BIG PICTURE</h4>
-          <h5>(Membership, Marketplace, Community wallet & DAO)</h5>
+          <h5 className='learn-top-subheading m-0'>(Membership, Marketplace, Community wallet & DAO)</h5>
+          <p>
+            The overall ethos of Project Noise is to create a one stop mutually lucrative platform for art collectors and creators on Solana. It is EVERYTHING ART!!
+          </p>
           <ul>
             <li><u><h5>Project Noise Collectors Club</h5></u></li>
           </ul>
           <p>
-            Each noise owned will double up as a membership pass for the Project Noise collectors club. By being in this club, you will have early minting access to all future collections. The premium collections will solely be reserved for the club members while others will be made public after a members-only pre-sale is concluded.<br />
-            We aim to bring the community of art collectors together on the Solana blockchain and offer them hand-picked curations of the most exquisite artworks available.
+            Each noise owned, will double up as a membership pass for the Project Noise collectors club. By being in this club you will have early minting access to all future collections. The premium collections will solely be reserved for the members of this club while others will be made public after a members only pre-sale is concluded.
           </p>
-          <ul>
-            <li><u><h5>Generative Art Marketplace</h5></u></li>
-          </ul>
+          <br />
           <p>
-            We will be launching a generative art marketplace, thus providing the rising talents to host their works.
+            We aim to bring the community of art collectors together on Solana blockchain and offer them hand-picked curations of the most exquisite artworks available in the NFT space.
           </p>
+          <br />
+          <p>
+            To kickstart the exclusive privileges for noise club members, we will be airdropping a set of fully on-chain artwork series in the coming months.
+          </p>
+          <br />
           <ul>
             <li><u><h5>Community Wallet and DAO</h5></u></li>
           </ul>
@@ -32,6 +37,12 @@ const LearnPage = () => {
             <br />
             <br />
             A DAO will be set up to vote on these purchases and for a fractionalized ownership of its assets among all the members.
+          </p>
+          <ul>
+            <li><u><h5>Generative Art Marketplace</h5></u></li>
+          </ul>
+          <p>
+            We will be launching a generative art marketplace, thus providing the rising talents to host their works.
           </p>
 
           <div className='division-div'></div>

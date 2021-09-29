@@ -13,7 +13,7 @@ const ComingSoon = () => {
       <div className='hr-div'></div>
       <Button variant='secondary' className='btn-primary2 p-3 btn-block'> Coming Soon </Button>
       {/* <div className='cardDiv m-0 p-2' id='perPieceAmt'>2 SOL per piece</div> */}
-      <div className='cardDiv m-0' id='pieceLeft'>Pricing & mint date will be announced shortly.</div>
+      <div className='cardDiv m-0' id='pieceLeft'>Mint date and price to be announced shortly.</div>
 
     </div>
   )

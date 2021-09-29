@@ -2,6 +2,9 @@
   height: 664px !important;
 }
 
+.react-multi-carousel-dot-list{
+  visibility: hidden;
+}
 
 .react-multiple-carousel__arrow{
   background: transparent;
@@ -39,6 +42,10 @@
 @media screen and (max-width: 812px) {
   .homecarousel{
     height: 564px !important;
+  }
+  .react-multi-carousel-dot-list{
+    visibility: visible;
+    margin-bottom: 100px;
   }
 
 }

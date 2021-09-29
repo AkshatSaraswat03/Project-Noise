@@ -44,6 +44,10 @@ li{
   width: 100%;
 }
 
+.learn-top-subheading{
+  padding-bottom: 24px;
+}
+
 @media screen and (max-width: 812px) {
   .learn-content{
     margin: 120px 0px 100px 0px; 

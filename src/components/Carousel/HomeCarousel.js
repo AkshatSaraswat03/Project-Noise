@@ -82,6 +82,7 @@ const HomeCarousel = () => {
       <Carousel
         swipeable={true}
         draggable={false}
+        showDots={true}
         responsive={responsive}
         customLeftArrow={<CustomLeftArrow />}
         customRightArrow={<CustomRightArrow />}
@@ -92,6 +93,7 @@ const HomeCarousel = () => {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType="Desktop"
         itemClass="carousel-item-padding-40-px"
+        dotListClass="custom-dot-list-style"
         className='homecarousel'
       >
         {img.map((image, index) => {
