@@ -42,10 +42,18 @@
   border:none;
   background: #040404;
   opacity: 0.15;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  margin-left: 6px;
 }
 .react-multi-carousel-dot--active button{
   background: #040404 !important;
   opacity: 1 ;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  margin-left: 6px;
 }
 
 
