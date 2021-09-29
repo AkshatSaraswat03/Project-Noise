@@ -116,7 +116,7 @@ const HomePage = () => {
               REF1ECT is the first of many curations coming ahead. This series is conceived by Project Noise itself.
             </p>
             <p>
-              2,222 unique synaesthetic artworks stored immutably on Solana blockchain.
+              2,222 unique synesthetic artworks stored immutably on Solana blockchain.
               REF1ECT, dives into the physics of H2O, mimicking its movement through the space guided by the life force of nature. This movement is captured and projected onto a canvas, thus freezing it for eternity.
             </p>
             <p>
