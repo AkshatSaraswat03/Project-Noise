@@ -1,14 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap'
+import GalleryCard from '../components/GalleryCard/GalleryCard';
+import Paginate from '../components/Pagination/Paginate';
+import Paginate2 from '../components/Pagination/Paginate2';
+import ReactPaginate from 'react-paginate'
+import '../components/Pagination/Paginate.css'
 import './gallery.css'
 
-const GalleryPage = ({ match }) => {
+const GalleryPage = () => {
 
-  const pageNumber = match.params.pageNumber || 1
+  const products = [
+    {
+      src: '/GalleryImages/gallery1.png',
+      code: '#0001'
+    },
+    {
+      src: '/GalleryImages/gallery2.png',
+      code: '#0002'
+    },
+    {
+      src: '/GalleryImages/gallery3.png',
+      code: '#0003'
+    },
+    {
+      src: '/GalleryImages/gallery4.png',
+      code: '#0004'
+    },
+    {
+      src: '/GalleryImages/gallery5.png',
+      code: '#0005'
+    },
+    {
+      src: '/GalleryImages/gallery6.png',
+      code: '#0006'
+    },
+    {
+      src: '/GalleryImages/gallery7.png',
+      code: '#0007'
+    },
+    {
+      src: '/GalleryImages/gallery8.png',
+      code: '#0008'
+    },
+    {
+      src: '/GalleryImages/gallery9.png',
+      code: '#0009'
+    },
+    {
+      src: '/GalleryImages/gallery1.png',
+      code: '#0010'
+    },
+    {
+      src: '/GalleryImages/gallery2.png',
+      code: '#0011'
+    },
+    {
+      src: '/GalleryImages/gallery4.png',
+      code: '#0012'
+    },
+    {
+      src: '/GalleryImages/gallery3.png',
+      code: '#0013'
+    },
+
+  ]
+  const perPage = 2;
+  const numberOfPages = (products.length % perPage === 0) ? parseInt(products.length / perPage) : parseInt(products.length / perPage) + 1;
+  console.log(numberOfPages)
+  const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
+
+  const updatePage = ({ selected }) => {
+    console.log(selected)
+    selected = selected + 1;
+    setDisplayedProducts(products.slice((selected - 1) * perPage, (selected * perPage)))
+    console.log("abcd")
+    console.log(displayedProducts)
+  }
+
 
   return (
-    <div>
-      <Row className='content'>
+    <div className='light-bg'>
+      <Row className='gallery-content light-bg mr-0'>
         <Col lg={3}></Col>
 
         <Col className='px-3'>
@@ -21,23 +93,58 @@ const GalleryPage = ({ match }) => {
         <Col lg={3}></Col>
         <Col lg={3}></Col>
       </Row>
-      <Row className='sticky-row'>
+      <Row className='sticky-row mr-0'>
         <Col lg={3}></Col>
-        <Col lg={6}>
+        <Col lg={6} className='px-3'>
           <div className='numberOfPieces'> 2,222 pieces</div>
         </Col>
         <Col lg={3}></Col>
       </Row>
-      <Row>
+      <Row className='mr-0'>
         <Col lg={3}></Col>
-        <Col lg={6} className='p-0'>
-          <Row>
-            <Col lg={6}></Col>
-            <Col lg={6}></Col>
+        <Col lg={6} className='px-3'>
+          <Row className='mr-0'>
+            {/* {products.slice((pageNumber - 1) * 1, (pageNumber * 1)).map((product, i) => (
+              <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
+                <GalleryCard src={product.src} code={product.code} />
+              </Col>
+            ))} */}
+            {displayedProducts.map((product, i) => (
+              <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
+                <GalleryCard src={product.src} code={product.code} />
+              </Col>
+            ))}
           </Row>
         </Col>
         <Col lg={3}></Col>
       </Row>
+
+      <Row className='mr-0'>
+        <Col lg={3}></Col>
+        <Col lg={6} className='text-center'>
+          {/* <Paginate totalPages={numberOfPages} page={pageNumber} /> */}
+          {numberOfPages > 1 && <ReactPaginate
+            pageCount={numberOfPages}
+            pageRangeDisplayed={4}
+            marginPagesDisplayed={1}
+            onPageChange={updatePage}
+            containerClassName="pagination"
+            activeClassName="active"
+            pageLinkClassName="page-link"
+            breakLinkClassName="page-link"
+            nextLinkClassName="page-link"
+            previousLinkClassName="page-link"
+            pageClassName="page-item"
+            breakClassName="page-item"
+            nextClassName="page-item"
+            previousClassName="page-item"
+            previousLabel={<>&laquo;</>}
+            nextLabel={<>&raquo;</>}
+          />}
+        </Col>
+        <Col lg={3}></Col>
+      </Row>
+
     </div>
   );
 };
