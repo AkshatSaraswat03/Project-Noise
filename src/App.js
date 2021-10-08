@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/Homepage';
 import LearnPage from './pages/LearnPage';
 import GalleryPage from './pages/GalleryPage';
+import ArtPage from './pages/ArtPage';
 import HomeCarousel from './components/Carousel/HomeCarousel';
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/home' component={HomePage} />
         <Route exact path='/gallery' component={GalleryPage} />
         <Route exact path='/learn' component={LearnPage} />
+        <Route exact path='/art' component={ArtPage} />
       </Switch>
     </Router>
 

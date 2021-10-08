@@ -1,0 +1,54 @@
+
+.bottom-margin-80{
+  margin-bottom: 80px;
+}
+
+.art-content p{
+  font-size: 18px !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+  margin: 0;
+}
+
+.art-content{
+  margin: 170px 0px 90px 0px;
+}
+
+.art-content img{
+  width: 100%;
+}
+
+.subheading{
+  padding-bottom: 24px;
+}
+.division-div{
+  margin: 80px 0px;
+  height: 3px !important;
+  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
+}
+
+.art-content h4{
+  width: 100%;
+  margin-bottom: 24px;
+}
+.art-content h5{
+  margin: 24px 0px;
+  width: 100%;
+}
+
+.flow-chart{
+  margin: 50px 0px;
+}
+
+.art-top-subheading{
+  padding-bottom: 24px;
+}
+
+@media screen and (max-width: 812px) {
+  .art-content{
+    margin: 120px 0px 100px 0px; 
+  }
+  
+  .division-div{
+    margin: 40px 0px !important;
+  }
+}

@@ -10,6 +10,14 @@ import ComingSoon from '../components/MintSections/ComingSoon';
 import Countdown from '../components/MintSections/Countdown';
 import SaleLive from '../components/MintSections/SaleLive';
 import Soldout from '../components/MintSections/Soldout';
+
+import team1 from '../assets/team1.png'
+import team2 from '../assets/team2.png'
+import team3 from '../assets/team3.png'
+import team4 from '../assets/team4.png'
+
+
+
 import './home.css'
 
 const HomePage = () => {
@@ -84,7 +92,7 @@ const HomePage = () => {
 
         <Row className='px-3 m-0'>
           <Col lg={3}></Col>
-          <Col lg={6} className='p-0'>
+          <Col lg={6} className=''>
             <p>
               Project noise is an art collective, embarking on a quest to reaffirm the idea of "art for art's sake." It dissolves the noise around and brings a clean sensory experience for the viewer.</p>
             <p>
@@ -116,8 +124,10 @@ const HomePage = () => {
               REF1ECT is the first of many curations coming ahead. This series is conceived by Project Noise itself.
             </p>
             <p>
-              2,222 unique synesthetic artworks stored immutably on Solana blockchain.
-              REF1ECT, dives into the physics of H2O, mimicking its movement through the space guided by the life force of nature. This movement is captured and projected onto a canvas, thus freezing it for eternity.
+              2222 unique synaesthetic artworks stored immutably on Solana blockchain.REF1ECT is a whole wide spectrum beginning from clean lines and ending up on completely diffused noise and this journey is what we present to you.
+            </p>
+            <p>
+              The aesthetics of the outputs incidentally resemble the movement of water as if it was captured onto a canvas and frozen in time.
             </p>
             <p>
               And, in the process of creation, the conscious is punctured by the unconscious at random intervals.
@@ -132,7 +142,7 @@ const HomePage = () => {
           <Col><h1>UTILITY?</h1></Col>
         </Row>
         <Row className='section4-row2'>
-          <Col><h1>ART.</h1></Col>
+          <Col><h1><a href='/art' style={{ textDecoration: 'none' }}>ART</a>.</h1></Col>
           <div>More about our roadmap <a href='/learn'>here</a>.</div>
         </Row>
       </div>
@@ -153,7 +163,7 @@ const HomePage = () => {
               But poetry, beauty, romance, love, these are what we stay alive for. To quote from Whitman "O me! O life!... of the questions of thsese recurring; of the endless trains of the faithless... of cities filled with the foolish; what good amid these, O me, O life?"
             </p>
             <p>
-              Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
+              A nswer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
             </p>
 
             <h5>-John Keating, Dead Poets Society</h5>
@@ -162,7 +172,50 @@ const HomePage = () => {
         </Row>
       </div>
 
-      <div className='light-bg section-6 px-3'>
+      <div className='section-6 dark-bg'>
+        <Row className='px-3'>
+          <Col></Col>
+          <Col lg={6} >
+            <Row className='p-0'><h1 className='p-0'>TEAM</h1></Row>
+            <Row className='team-row p-0'>
+              <Col lg={2} md={12}><img src={team1} alt='team1'></img></Col>
+              <Col lg={10} md={12}>
+                <h5>blackrabbit (Art)</h5>
+                <div className='partition-div'></div>
+                <p>Architect, procedural artist & thinker. </p>
+              </Col>
+            </Row>
+            <Row className='team-row p-0'>
+              <Col lg={2} md={12}><img src={team2} alt='team2'></img></Col>
+              <Col lg={10} md={12}>
+                <h5>0xfool (Design & Outreach)</h5>
+                <div className='partition-div'></div>
+                <p>Opsessed with jpegs, design & web 3.0 </p>
+              </Col>
+            </Row>
+            <Row className='team-row p-0'>
+              <Col lg={2} md={12}><img src={team3} alt='team3'></img></Col>
+              <Col lg={10} md={12}>
+                <h5>Ashish (Rust)</h5>
+                <div className='partition-div'></div>
+                <p>Everything defi, dapps and dex. </p>
+              </Col>
+            </Row>
+            <Row className='team-row p-0'>
+              <Col lg={2} md={12}><img src={team4} alt='team4'></img></Col>
+              <Col lg={10} md={12}>
+                <h5>HRJ (Front-end)</h5>
+                <div className='partition-div'></div>
+                <p>Student. Python & java dev. </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col></Col>
+        </Row>
+      </div>
+
+
+      <div className='light-bg section-7 px-3'>
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='carousel-col'>
@@ -173,7 +226,7 @@ const HomePage = () => {
       </div>
 
 
-      <div className='section-7 dark-bg px-3'>
+      <div className='section-8 dark-bg px-3'>
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='footer pt-1'>
@@ -183,10 +236,10 @@ const HomePage = () => {
               <Col lg={3} className='px-0'>
                 <Row className='m-0 p-0'>
                   <Col lg={3}></Col>
-                  <Col className='text-center'>
+                  <Col className='text-center p-0'>
                     <Nav.Link href='https://twitter.com/Prjctnoise' className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
                   </Col>
-                  <Col className='text-center'>
+                  <Col className='text-center p-0'>
                     <Nav.Link href='https://discord.gg/2AXCqUWX5J' className='social-media-discord'><div className='discord' ></div></Nav.Link>
                   </Col>
                 </Row>
