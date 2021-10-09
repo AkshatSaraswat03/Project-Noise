@@ -18,7 +18,7 @@ const ArtPage = () => {
         <Col lg={6} className='px-3'>
 
           <div className='text-center bottom-margin-80'>
-            <h1 className='primary-text'>“Impluse. Respose. Fluid. Imperfect. Pattered. Chaotic.”</h1>
+            <h1 className='primary-text'>“Impluse. Response. Fluid. Imperfect. Patterned. Chaotic.”</h1>
             <h5>- Nathan, Ex Machina</h5>
           </div>
 
