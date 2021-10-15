@@ -39,9 +39,9 @@ const TopNav = () => {
                 <LinkContainer to='/'>
                   <NavLink onClick={() => { homebtnselected() }} active={false} className={` home-nav ${homebtn ? 'active-nav' : 'inactive-nav'}`}>Home</NavLink>
                 </LinkContainer>
-                {/* <LinkContainer to='/gallery'>
+                <LinkContainer to='/gallery'>
                   <NavLink onClick={() => { gallerybtnselected() }} active={false} className={` gallery-nav ${gallerybtn ? 'active-nav' : 'inactive-nav'}`}>Gallery</NavLink>
-                </LinkContainer> */}
+                </LinkContainer>
                 <LinkContainer to='/learn'>
                   <NavLink onClick={() => { learnbtnselected() }} active={false} className={` learn-nav ${learnbtn ? 'active-nav' : 'inactive-nav'}`}>Learn</NavLink>
                 </LinkContainer>
