@@ -133,6 +133,7 @@
 
 .section-5{
   padding: 100px 0;
+  border: none;
 }
 
 .section-5 h1{
@@ -144,10 +145,33 @@
 }
 
 .section-6{
-
+  padding-bottom: 100px;
+  margin-top: -5px;
+  border: none;
 }
 
- .carousel-col{
+.section-6 h1{
+  margin-bottom: 80px;
+}
+
+.section-6 .partition-div{
+  background: rgba(255, 255, 255, 0.4);
+  height: 1px;
+  border: none;
+  width: 100%;
+  margin: 16px 0px;
+}
+
+.team-row{
+  margin-bottom: 60px;
+}
+
+.team-row img{
+  width: 100%;
+  border: solid 1px rgba(255, 255, 255, 0.4);
+}
+
+.carousel-col{
   margin-left: auto;
   margin-right: auto;
 }
@@ -222,6 +246,12 @@
   }
   p{
     font-size: 18px !important;
+  }
+
+  .team-row img{
+    width: 40%;
+    margin-bottom: 30px;
+    border: solid 1px rgba(255, 255, 255, 0.4);
   }
 
 }

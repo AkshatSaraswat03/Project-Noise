@@ -73,6 +73,25 @@
 
 
 
+.art-nav{
+  color:rgba(255,255,255,.55);
+  font-size: 20px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  margin-left: 18px !important;
+  margin-right: 18px !important;
+}
+.art-nav:hover {
+  color:#FFFFFF !important;
+  font-size: 20px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  margin-right: 18px !important;
+  margin-left: 18px !important;
+}
+
 .learn-nav{
   color:rgba(255,255,255,.55);
   font-size: 20px;
@@ -215,6 +234,22 @@
     font-size: 24px;
   }
   .gallery-nav:active{
+    margin-top: 40px;
+    padding: 0;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 24px;
+  }
+  .art-nav{
+    margin-top: 40px;
+    padding: 0;
+    width: max-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 24px;
+  }
+  .art-nav:active{
     margin-top: 40px;
     padding: 0;
     width: max-content;

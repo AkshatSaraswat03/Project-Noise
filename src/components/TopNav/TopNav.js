@@ -7,21 +7,31 @@ import './nav.css'
 const TopNav = () => {
   const [homebtn, sethomebtn] = useState(true);
   const [gallerybtn, setgallerybtn] = useState(false);
+  const [artbtn, setartbtn] = useState(false);
   const [learnbtn, setlearnbtn] = useState(false);
 
   const homebtnselected = () => {
     sethomebtn(true)
     setgallerybtn(false)
+    setartbtn(false)
     setlearnbtn(false)
   }
   const gallerybtnselected = () => {
     sethomebtn(false)
     setgallerybtn(true)
+    setartbtn(false)
+    setlearnbtn(false)
+  }
+  const artbtnselected = () => {
+    sethomebtn(false)
+    setgallerybtn(false)
+    setartbtn(true)
     setlearnbtn(false)
   }
   const learnbtnselected = () => {
     sethomebtn(false)
     setgallerybtn(false)
+    setartbtn(false)
     setlearnbtn(true)
   }
 
@@ -41,6 +51,9 @@ const TopNav = () => {
                 </LinkContainer>
                 <LinkContainer to='/gallery'>
                   <NavLink onClick={() => { gallerybtnselected() }} active={false} className={` gallery-nav ${gallerybtn ? 'active-nav' : 'inactive-nav'}`}>Gallery</NavLink>
+                </LinkContainer> 
+                <LinkContainer to='/art'>
+                  <NavLink onClick={() => { artbtnselected() }} active={false} className={` art-nav ${artbtn ? 'active-nav' : 'inactive-nav'}`}>Art</NavLink>
                 </LinkContainer>
                 <LinkContainer to='/learn'>
                   <NavLink onClick={() => { learnbtnselected() }} active={false} className={` learn-nav ${learnbtn ? 'active-nav' : 'inactive-nav'}`}>Learn</NavLink>
