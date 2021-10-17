@@ -30,7 +30,7 @@ const CheckResult = () => {
   }
   return (
     <div>
-      <div class="head w-100 ">
+      <div class="head w-100 h-100">
         <h2 class="heading">#REF1ECT</h2>
         <h1 class="heading border-bottom">THE WHITELIST</h1>
         <p class = "py-5">Fill in your wallet address below to check if you made it.</p>
