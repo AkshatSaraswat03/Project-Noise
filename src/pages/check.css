@@ -1,6 +1,7 @@
 .head{
     background-color: black;
-    padding: 10rem 25rem;
+    margin-top: 5rem;
+    padding: 10rem 35rem;
     z-index: -4;
 }
 .heading{
@@ -8,6 +9,6 @@
     /* text-align: center; */
 }
 
-.submit{
-
+.formtext{
+    width: 1.5rem;
 }
