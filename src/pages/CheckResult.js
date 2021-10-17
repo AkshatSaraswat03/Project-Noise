@@ -3,22 +3,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './check.css'
 import { listenerCount } from 'process';
 import { useState} from 'react';
-
+import list from '../8wn96-5xm49.json'
 
 const CheckResult = () => {
   const [selected, setSelected] = useState('');
-  var list=[
-    {
-      "walletAdderss" : "hfdnjnvjfdnjnvejdmnjmnm",
-    },
-    {
-      "walletAdderss" : "49808eodufrdjm",
-    }
-  ];
+  // var list=[
+  //   {
+  //     "walletAdderss" : "hfdnjnvjfdnjnvejdmnjmnm",
+  //   },
+  //   {
+  //     "walletAdderss" : "49808eodufrdjm",
+  //   }
+  // ];
   const [info, setInfo] = useState('-');
   const handleSubmit = async () => {
     for(var i=0;i<list.length;i++){
-      if(list[i].walletAdderss==selected){
+      if(list[i].WalletAddress==selected){
         setInfo("Congratulations, You’re in!");
         break;
       }

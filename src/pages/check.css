@@ -1,7 +1,7 @@
 .head{
     background-color: black;
     margin-top: 5rem;
-    padding: 10rem 35rem;
+    padding: 7rem 35rem;
     z-index: -4;
 }
 .heading{
@@ -11,4 +11,7 @@
 
 .formtext{
     width: 1.5rem;
+}
+.tect{
+    font-size: 1.5rem !important;
 }

@@ -7,6 +7,8 @@ import LearnPage from './pages/LearnPage';
 import GalleryPage from './pages/GalleryPage';
 import ArtPage from './pages/ArtPage';
 import MintPage from './pages/MintPage';
+import CheckResult from './pages/CheckResult';
+
 function App() {
   return (
     <Router>
@@ -18,7 +20,7 @@ function App() {
         <Route exact path='/learn' component={LearnPage} />
         <Route exact path='/art' component={ArtPage} />
         <Route exact path='/mint' component={MintPage} />
-        <Route exact path='/check' component={MintPage} />
+        <Route exact path='/check' component={CheckResult} />
       </Switch>
     </Router>
 
