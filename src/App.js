@@ -8,6 +8,8 @@ import GalleryPage from './pages/GalleryPage';
 import ArtPage from './pages/ArtPage';
 import CheckResult from './pages/CheckResult';
 import HomeCarousel from './components/Carousel/HomeCarousel';
+
+import MintPage from './pages/MintPage';
 function App() {
   return (
     <Router>
@@ -19,6 +21,7 @@ function App() {
         <Route exact path='/learn' component={LearnPage} />
         <Route exact path='/art' component={ArtPage} />
         <Route exact path='/check' component={CheckResult} />
+        <Route exact path='/mint' component={MintPage} />
       </Switch>
 
     </Router>

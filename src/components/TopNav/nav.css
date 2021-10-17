@@ -1,5 +1,5 @@
 .navbar{
-  position: absolute;
+  position: sticky;
 }
 
 .collapsing{
@@ -207,7 +207,7 @@
   } 
   .navbar-collapse{
     height: 100vh;
-    transform: translateY(20%);
+    transform: translateY(17%);
   }
   .home-nav{
     margin-top: 40px;

@@ -7,10 +7,10 @@ import web_hero_gif from '../assets/web_hero_gif.gif'
 import mobile_hero_gif from '../assets/mobile_hero_gif.gif'
 import HomeCarousel from '../components/Carousel/HomeCarousel';
 
-import ComingSoon from '../components/MintSections/ComingSoon';
-import Countdown from '../components/MintSections/Countdown';
-import SaleLive from '../components/MintSections/SaleLive';
-import Soldout from '../components/MintSections/Soldout';
+import GoToMintInactive from '../components/MintSections/GoToMintInactive';
+import GoToMintActive from '../components/MintSections/GoToMintActive';
+import Soldout2 from '../components/MintSections/Soldout2';
+import Soldout1 from '../components/MintSections/Soldout1';
 
 import team1 from '../assets/team1.png'
 import team2 from '../assets/team2.png'
@@ -35,7 +35,7 @@ const HomePage = () => {
               </div>
               <div className='mint-section'>
                 <div className='mint-container'>
-                  <ComingSoon />
+                  <GoToMintInactive />
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@ const HomePage = () => {
               <img src={mobile_hero_gif} alt='gif' className='gifMobile' />
             </div>
             <div className='mobileMintComponent p-0'>
-              <ComingSoon />
+              <GoToMintInactive />
             </div>
           </Col>
 
@@ -164,7 +164,7 @@ const HomePage = () => {
               But poetry, beauty, romance, love, these are what we stay alive for. To quote from Whitman "O me! O life!... of the questions of thsese recurring; of the endless trains of the faithless... of cities filled with the foolish; what good amid these, O me, O life?"
             </p>
             <p>
-              A nswer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
+              Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
             </p>
 
             <h5>-John Keating, Dead Poets Society</h5>
@@ -173,38 +173,38 @@ const HomePage = () => {
         </Row>
       </div>
 
-      <div className='section-6 dark-bg'>
+      <div className='section-6 light-bg'>
         <Row className='px-3'>
           <Col></Col>
           <Col lg={6} >
             <Row className='p-0'><h1 className='p-0'>TEAM</h1></Row>
             <Row className='team-row p-0'>
-              <Col lg={2} md={12} className='pl-0'><img src={team1} alt='team1'></img></Col>
-              <Col lg={10} md={12} className='pl-0'>
+              <Col lg={2} md={12} style={{ 'paddingLeft': '0px' }}><img src={team1} alt='team1'></img></Col>
+              <Col lg={10} md={12} style={{ 'marginTop': 'auto', 'marginBottom': 'auto', 'paddingLeft': '0px' }}>
                 <h5>blackrabbit (Art)</h5>
                 <div className='partition-div'></div>
                 <p>Architect, procedural artist & thinker. </p>
               </Col>
             </Row>
             <Row className='team-row p-0'>
-              <Col lg={2} md={12} className='pl-0'><img src={team2} alt='team2'></img></Col>
-              <Col lg={10} md={12} className='pl-0'>
+              <Col lg={2} md={12} style={{ 'paddingLeft': '0px' }}><img src={team2} alt='team2'></img></Col>
+              <Col lg={10} md={12} style={{ 'marginTop': 'auto', 'marginBottom': 'auto', 'paddingLeft': '0px' }}>
                 <h5>0xfool (Design & Outreach)</h5>
                 <div className='partition-div'></div>
                 <p>Obsessed with jpegs, design & web 3.0 </p>
               </Col>
             </Row>
             <Row className='team-row p-0'>
-              <Col lg={2} md={12} className='pl-0'><img src={team3} alt='team3'></img></Col>
-              <Col lg={10} md={12} className='pl-0'>
+              <Col lg={2} md={12} style={{ 'paddingLeft': '0px' }}><img src={team3} alt='team3'></img></Col>
+              <Col lg={10} md={12} style={{ 'marginTop': 'auto', 'marginBottom': 'auto', 'paddingLeft': '0px' }}>
                 <h5>Ashish (Rust)</h5>
                 <div className='partition-div'></div>
                 <p>Everything defi, dapps and dex. </p>
               </Col>
             </Row>
             <Row className='team-row p-0'>
-              <Col lg={2} md={12} className='pl-0'><img src={team4} alt='team4'></img></Col>
-              <Col lg={10} md={12} className='pl-0'>
+              <Col lg={2} md={12} style={{ 'paddingLeft': '0px' }}><img src={team4} alt='team4'></img></Col>
+              <Col lg={10} md={12} style={{ 'marginTop': 'auto', 'marginBottom': 'auto', 'paddingLeft': '0px' }}>
                 <h5>HRJ (Front-end)</h5>
                 <div className='partition-div'></div>
                 <p>Student. Python & java dev. </p>
@@ -216,7 +216,7 @@ const HomePage = () => {
       </div>
 
 
-      <div className='light-bg section-7 px-3'>
+      <div className='dark-bg section-7 px-3'>
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='carousel-col'>

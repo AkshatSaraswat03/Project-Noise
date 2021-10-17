@@ -7,8 +7,10 @@ import carousel3 from '../../assets/carousel3.png'
 import carousel4 from '../../assets/carousel4.png'
 import carousel5 from '../../assets/carousel5.png'
 import carousel6 from '../../assets/carousel6.png'
-import rightArrow from '../../assets/rightarrow.png'
-import leftArrow from '../../assets/leftarrow.png'
+// import rightarrow from '../../assets/rightarrow.png'
+// import leftarrow from '../../assets/leftarrow.png'
+import leftarrow from '../../assets/leftarrow.png'
+import rightarrow from '../../assets/rightarrow.png'
 
 function CustomLeftArrow({ onClick }) {
   function handleClick() {
@@ -22,7 +24,7 @@ function CustomLeftArrow({ onClick }) {
       aria-label="Go to previous slide"
       className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left"
     >
-      <img src={leftArrow} className='left-arrow' alt='prev' />
+      <img src={leftarrow} className='left-arrow' alt='prev' />
     </button>
   );
 }
@@ -40,7 +42,7 @@ function CustomRightArrow({ onClick }) {
       aria-label="Go to next slide"
       className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right"
     >
-      <img src={rightArrow} className='right-arrow' alt='next' />
+      <img src={rightarrow} className='right-arrow' alt='next' />
     </button>
   );
 }
@@ -103,7 +105,7 @@ const HomeCarousel = () => {
                 draggable={false}
                 alt="text"
                 src={image}
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '80%', height: '80%' }}
               />
             </div>
           );
