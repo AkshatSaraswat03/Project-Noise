@@ -160,6 +160,9 @@ p{
   padding: 20px 24px;
 }
 
+.btn:disabled{
+  opacity: 0.4;
+}
 
 
 
