@@ -7,8 +7,8 @@ import carousel3 from '../../assets/carousel3.png'
 import carousel4 from '../../assets/carousel4.png'
 import carousel5 from '../../assets/carousel5.png'
 import carousel6 from '../../assets/carousel6.png'
-import rightArrow from '../../assets/rightarrow.png'
-import leftArrow from '../../assets/leftarrow.png'
+import rightArrow from '../../assets/rightArrow.png'
+import leftArrow from '../../assets/leftArrow.png'
 
 function CustomLeftArrow({ onClick }) {
   function handleClick() {
@@ -103,7 +103,7 @@ const HomeCarousel = () => {
                 draggable={false}
                 alt="text"
                 src={image}
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '80%', height: '80%' }}
               />
             </div>
           );

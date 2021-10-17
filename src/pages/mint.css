@@ -1,0 +1,37 @@
+.mintpage-section{
+  padding: 110px 0px 125px 0px;
+  min-height: 95vh;
+}
+
+.hr-div{
+  border: none;
+  height: 2px !important;
+  background: white;
+  margin: 56px 0px;
+}
+
+.op-60{
+  opacity: 0.6;
+}
+
+.countdown-div{
+  font-size: 36px;
+  padding: 16px 0px;
+  color: #000000 !important;
+  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
+  border: none;
+  border-radius: 0;
+  margin-top: 56px;
+  margin-bottom: 24px;
+}
+
+.medium-text{
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+
+
+.wallet-mintpage-btn{
+  margin: 56px 0px 24px 0px;
+}

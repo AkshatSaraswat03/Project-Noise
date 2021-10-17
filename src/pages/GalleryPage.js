@@ -75,41 +75,40 @@ const GalleryPage = () => {
     console.log(selected)
     selected = selected + 1;
     setDisplayedProducts(products.slice((selected - 1) * perPage, (selected * perPage)))
-    console.log("abcd")
     console.log(displayedProducts)
   }
 
   useEffect(() => {
     (async () => {
       console.log("calling api");
-        //TODO: update details for production server
-        fetch('http://62.171.171.181:8080/WalletPOC/w2/rest/v1/wallets')        
-          .then(response => response.json())
-          .then(data => {
+      //TODO: update details for production server
+      fetch('http://62.171.171.181:8080/WalletPOC/w2/rest/v1/wallets')
+        .then(response => response.json())
+        .then(data => {
 
-            if (data.success) {
-              console.log(data.result);              
-              for (var i = 0; i < data.result.data.length; i++) {
-                // console.log(data.result.data[i].transaction);
-                let mint = data.result.data[i].transaction.toString();
-                  let product = {
-                    code: "",
-                    owner: "",
-                    src: "",
-                    traits: {}
-                  };
-                  //get NFT details from mint - 
-                  //TODO: update details for mainnet
-                  fetch('https://api-devnet.solscan.io/account?address=' + mint)
-                  .then(response => response.json())
-                  .then(data => {
-                    // console.log(data.data.tokenInfo);
-                    let tokenInfo = data.data.tokenInfo;
-                    let uri = data.data.metadata.data.uri;
-                    product.code = tokenInfo.name;
-                    product.owner = tokenInfo.tokenAuthority;
-                    //get Image
-                    fetch(uri)
+          if (data.success) {
+            console.log(data.result);
+            for (var i = 0; i < data.result.data.length; i++) {
+              // console.log(data.result.data[i].transaction);
+              let mint = data.result.data[i].transaction.toString();
+              let product = {
+                code: "",
+                owner: "",
+                src: "",
+                traits: {}
+              };
+              //get NFT details from mint - 
+              //TODO: update details for mainnet
+              fetch('https://api-devnet.solscan.io/account?address=' + mint)
+                .then(response => response.json())
+                .then(data => {
+                  // console.log(data.data.tokenInfo);
+                  let tokenInfo = data.data.tokenInfo;
+                  let uri = data.data.metadata.data.uri;
+                  product.code = tokenInfo.name;
+                  product.owner = tokenInfo.tokenAuthority;
+                  //get Image
+                  fetch(uri)
                     .then(response => response.json())
                     .then(data => {
                       // console.log(data.attributes);
@@ -122,17 +121,18 @@ const GalleryPage = () => {
                 })
                 .catch(error => {
                   console.log(error.message);
-                });   
-                
-                products.push(product);
-              }  
-              console.log(products);                           
+                });
+
+              products.push(product);
             }
-            else {
-              console.log(data.result.message);
-            }
-            
-          });
+            console.log(products);
+            setDisplayedProducts(products)
+          }
+          else {
+            console.log(data.result.message);
+          }
+
+        });
     })();
   });
   return (
@@ -145,7 +145,7 @@ const GalleryPage = () => {
           <h1>#REF<span className='primary-text'>1</span>ECT</h1>
           <p>
             Here the physics of implosion is explored to create a dynamic movement on the canvas, mimicking the life force of nature.
-          </p>          
+          </p>
           {/* <GalleryCard src={imageUri} code="ASH" /> */}
         </Col>
         <Col lg={3}></Col>
