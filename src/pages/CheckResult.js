@@ -34,7 +34,7 @@ const CheckResult = () => {
         <h2 class="heading">#REF1ECT</h2>
         <h1 class="heading border-bottom">THE WHITELIST</h1>
         <p class = "py-5">Fill in your wallet address below to check if you made it.</p>
-        <p secondary class="text-center ">{info}</p>
+        <p secondary class="text-center tect">{info}</p>
         <input type="text" class="w-100  text-light bg-dark" placeholder="Paste the wallet address" value={selected}
 							onChange={(e) => {
 								setSelected(e.target.value);
