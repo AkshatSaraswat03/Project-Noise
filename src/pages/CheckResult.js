@@ -34,11 +34,11 @@ const CheckResult = () => {
         <Col className='px-3' lg={6}>
           <Row>
             <Col lg={2}></Col>
-            <Col lg={8}>
+            <Col lg={8} className='p-0'>
               <h4>#REF<span className='primary-text pb-3'>1</span>ECT</h4>
               <h1>THE WHITELIST</h1>
               <p>Fill in your wallet address below to check if you made it.</p>
-              <h2 class="text-center tect primary-text">{info}</h2>
+              <h2 className="text-center tect primary-text">{info}</h2>
               <input type="text" class="text-light bg-dark" placeholder="Paste the wallet address" value={selected}
                 onChange={(e) => {
                   setSelected(e.target.value);

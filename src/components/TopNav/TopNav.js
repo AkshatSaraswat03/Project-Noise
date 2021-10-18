@@ -53,7 +53,7 @@ const TopNav = ({ location }) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <div style={{ width: '100%' }}>
             <Navbar.Collapse id="responsive-navbar-nav">
-              {location.pathname !== '/mint' ?
+              {location.pathname !== '/mint' && location.pathname !== '/whitelist-checker' ?
                 <Nav className="me-auto"  >
                   <LinkContainer to='/'>
                     <NavLink onClick={() => { homebtnselected() }} active={false} className={` home-nav ${homebtn ? 'active-nav' : 'inactive-nav'}`}>Home</NavLink>
@@ -73,16 +73,18 @@ const TopNav = ({ location }) => {
                 {location.pathname === '/mint' ?
                   <Button variant='secondary' className='ml-4 mr-2 btn-outline' id='wallet-btn'>Connect Wallet</Button>
                   :
-                  <Row>
-                    <Col className='dummyNavCol'></Col>
-                    <Col >
-                      <Nav.Link href='https://twitter.com/Prjctnoise' className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
-                    </Col>
+                  location.pathname === '/whitelist-checker' ? <Nav />
+                    :
+                    <Row>
+                      <Col className='dummyNavCol'></Col>
+                      <Col >
+                        <Nav.Link href='https://twitter.com/Prjctnoise' className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
+                      </Col>
 
-                    <Col >
-                      <Nav.Link href='https://discord.gg/2AXCqUWX5J' className='social-media-discord'><div className='discord' ></div></Nav.Link>
-                    </Col>
-                  </Row>
+                      <Col >
+                        <Nav.Link href='https://discord.gg/2AXCqUWX5J' className='social-media-discord'><div className='discord' ></div></Nav.Link>
+                      </Col>
+                    </Row>
                 }
               </Nav>
             </Navbar.Collapse>

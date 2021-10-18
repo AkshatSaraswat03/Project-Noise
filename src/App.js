@@ -20,7 +20,7 @@ function App() {
         <Route exact path='/learn' component={LearnPage} />
         <Route exact path='/art' component={ArtPage} />
         <Route exact path='/mint' component={MintPage} />
-        <Route exact path='/check' component={CheckResult} />
+        <Route exact path='/whitelist-checker' component={CheckResult} />
       </Switch>
     </Router>
 
