@@ -1,8 +1,7 @@
-import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
 import './check.css'
 import { listenerCount } from 'process';
-import { useState} from 'react';
+import { Row, Col, Button } from 'react-bootstrap'
+import { useState } from 'react';
 import list from '../8wn96-5xm49.json'
 
 const CheckResult = () => {
@@ -17,33 +16,41 @@ const CheckResult = () => {
   // ];
   const [info, setInfo] = useState('-');
   const handleSubmit = async () => {
-    for(var i=0;i<list.length;i++){
-      if(list[i].WalletAddress==selected){
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].WalletAddress === selected) {
         setInfo("Congratulations, You’re in!");
         break;
       }
-      else{
+      else {
         setInfo("Sorry, you didn’t make it!");
       }
     }
     console.log(info);
   }
   return (
-    <div>
-      <div class="head w-100 h-100">
-        <h2 class="heading">#REF1ECT</h2>
-        <h1 class="heading border-bottom">THE WHITELIST</h1>
-        <p class = "py-5">Fill in your wallet address below to check if you made it.</p>
-        <p secondary class="text-center tect">{info}</p>
-        <input type="text" class="w-100  text-light bg-dark" placeholder="Paste the wallet address" value={selected}
-							onChange={(e) => {
-								setSelected(e.target.value);
-							}}/>
-        <div class="w-100 text-center py-3">
-          <input type="submit" secondary class="btn-primary2  btn-block" value="Check if you’re on the list!" onClick={handleSubmit}/>
-        </div>
-        
-      </div>
+    <div className='dark-bg check-section'>
+      <Row>
+        <Col lg={3}></Col>
+        <Col className='px-3' lg={6}>
+          <Row>
+            <Col lg={2}></Col>
+            <Col lg={8}>
+              <h4>#REF<span className='primary-text pb-3'>1</span>ECT</h4>
+              <h1>THE WHITELIST</h1>
+              <p>Fill in your wallet address below to check if you made it.</p>
+              <h2 class="text-center tect primary-text">{info}</h2>
+              <input type="text" class="text-light bg-dark" placeholder="Paste the wallet address" value={selected}
+                onChange={(e) => {
+                  setSelected(e.target.value);
+                }} />
+              <Button variant='secondary' className='btn-primary m-0 btn-block' onClick={handleSubmit}> Check if you’re on the list! </Button>
+              {/* <Button type="submit" class='btn-primary btn-block' onClick={handleSubmit} >Check if you’re on the list!</Button> */}
+            </Col>
+            <Col lg={2}></Col>
+          </Row>
+        </Col>
+        <Col lg={3}></Col>
+      </Row>
     </div>
   );
 };
