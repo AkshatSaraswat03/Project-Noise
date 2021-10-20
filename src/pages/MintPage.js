@@ -12,7 +12,7 @@ const MintPage = () => {
       <Row>
         <Col lg={4}></Col>
         <Col lg={4}>
-          <Soldout />
+          <Countdown />
         </Col>
         <Col lg={4}></Col>
       </Row>
