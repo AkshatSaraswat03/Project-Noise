@@ -69,8 +69,10 @@ const GalleryPage = () => {
   const perPage = 2;
   const numberOfPages = (products.length % perPage === 0) ? parseInt(products.length / perPage) : parseInt(products.length / perPage) + 1;
   console.log(numberOfPages)
-  const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
+  // const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
+  let [displayedProducts, setDisplayedProducts] = useState([]);
   let imageUri = "";
+  
   const updatePage = ({ selected }) => {
     console.log(selected)
     selected = selected + 1;
@@ -80,9 +82,9 @@ const GalleryPage = () => {
 
   useEffect(() => {
     (async () => {
-      console.log("calling api");
+      // console.log("calling api");
       //TODO: update details for production server
-      fetch('http://62.171.171.181:8080/WalletPOC/w2/rest/v1/wallets')
+      fetch('https://mintapi.projectnoise.io:8443/WalletPOC/w2/rest/v1/wallets')
         .then(response => response.json())
         .then(data => {
 
@@ -102,7 +104,7 @@ const GalleryPage = () => {
               fetch('https://api-devnet.solscan.io/account?address=' + mint)
                 .then(response => response.json())
                 .then(data => {
-                  // console.log(data.data.tokenInfo);
+                  console.log(data.data);
                   let tokenInfo = data.data.tokenInfo;
                   let uri = data.data.metadata.data.uri;
                   product.code = tokenInfo.name;
@@ -123,10 +125,11 @@ const GalleryPage = () => {
                   console.log(error.message);
                 });
 
-              products.push(product);
-            }
-            console.log(products);
-            setDisplayedProducts(products)
+              products.push(product);              
+            }            
+            console.log(products);   
+            // setDisplayedProducts(products);                 
+            // setDisplayedProducts(products.slice(0, perPage));
           }
           else {
             console.log(data.result.message);
@@ -134,6 +137,7 @@ const GalleryPage = () => {
 
         });
     })();
+    // setDisplayedProducts(products)
   });
   return (
     <div className='light-bg'>
@@ -145,8 +149,7 @@ const GalleryPage = () => {
           <h1>#REF<span className='primary-text'>1</span>ECT</h1>
           <p>
             Here the physics of implosion is explored to create a dynamic movement on the canvas, mimicking the life force of nature.
-          </p>
-          {/* <GalleryCard src={imageUri} code="ASH" /> */}
+          </p>          
         </Col>
         <Col lg={3}></Col>
         <Col lg={3}></Col>
