@@ -3,33 +3,35 @@ import { Modal, Button, Row, Col } from 'react-bootstrap'
 
 import './GalleryCard.css'
 
-const GalleryCard = ({ src, code }) => {
+const GalleryCard = ({ product }) => {
   const [show, setShow] = useState(false);
   const [image, setImage] = useState('');
   const [imgCode, setImgCode] = useState('');
+  const [owner, setOwner] = useState('');
+  const [color, setColor] = useState('');
+  const [type, setType] = useState('');
 
-  const updateImgandCode = (img, codeee) => {
-    // console.log('abced')
-    // console.log(img, codeee)
-    // console.log('abced')
-    setImage(img);
-    setImgCode(codeee)
+
+  const updateImgandCode = (product) => {
+    setImage(product.src);
+    setImgCode(product.code)
+    setOwner(product.owner)
+    setColor(product.traits[0].value)
+    setType(product.traits[1].value)
   }
-
-
-  console.log(src, code)
+  console.log(product)
 
   return (
     <>
       <div className='gallerycard' onClick={() => {
         setShow(true);
-        updateImgandCode(src, code)
+        updateImgandCode(product)
       }}>
         <div className='card-image'>
-          <img src={src} alt='galleryimage' />
+          <img src={product.src} alt='galleryimage' />
         </div>
         <div className='image-code'>
-          {code}
+          {product.code}
         </div>
       </div>
 
@@ -39,8 +41,11 @@ const GalleryCard = ({ src, code }) => {
         </Modal.Header>
         <Modal.Body className='modal-body'>
           <Row >
-            <Col lg={4}></Col>
-            <Col className='px-3'>
+            <Col lg={3}></Col>
+            <Col lg={6} className='px-3'>
+
+
+
               <Row className='heading-row'>
                 <Col lg={6}><h2 className='m-0'>{imgCode}</h2></Col>
               </Row>
@@ -51,22 +56,25 @@ const GalleryCard = ({ src, code }) => {
                   </div>
                   <Row className='ownedBy'>
                     <Col className='fade-text'>Owned By:</Col>
-                    <Col className='text-end'>0xAE242E</Col>
+                    <Col className='text-end'>{owner}</Col>
                   </Row>
                   <div className='hrdiv'></div>
                   <h5 className='subheading-1'>Traits</h5>
                   <Row className='text-1'>
                     <Col className='fade-text'>Category</Col>
-                    <Col className='text-end'>Wave <span className='fade-text'>(1777)</span></Col>
+                    <Col className='text-end'>{type}<span className='fade-text'>(1777)</span></Col>
                   </Row>
                   <Row>
                     <Col className='fade-text'>Color</Col>
-                    <Col className='text-end'>White <span className='fade-text'>(22)</span></Col>
+                    <Col className='text-end'>{color} <span className='fade-text'>(22)</span></Col>
                   </Row>
                 </Col>
               </Row>
+
+
+
             </Col>
-            <Col lg={4}></Col>
+            <Col lg={3}></Col>
           </Row>
         </Modal.Body>
       </Modal>

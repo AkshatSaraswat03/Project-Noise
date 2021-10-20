@@ -66,23 +66,15 @@ const GalleryPage = () => {
   //   },
 
   // ]
-  const perPage = 2;
-  const numberOfPages = (products.length % perPage === 0) ? parseInt(products.length / perPage) : parseInt(products.length / perPage) + 1;
-  console.log(numberOfPages)
+
+  const perPage = 6;
+  let numberOfPages = 0
   // const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
-  let [displayedProducts, setDisplayedProducts] = useState([]);
+  const [displayedProducts, setDisplayedProducts] = useState([]);
   let imageUri = "";
-  
-  const updatePage = ({ selected }) => {
-    console.log(selected)
-    selected = selected + 1;
-    setDisplayedProducts(products.slice((selected - 1) * perPage, (selected * perPage)))
-    console.log(displayedProducts)
-  }
 
   useEffect(() => {
-    (async () => {
-      // console.log("calling api");
+    async function fetchData() {
       //TODO: update details for production server
       fetch('https://mintapi.projectnoise.io:8443/WalletPOC/w2/rest/v1/wallets')
         .then(response => response.json())
@@ -91,7 +83,6 @@ const GalleryPage = () => {
           if (data.success) {
             console.log(data.result);
             for (var i = 0; i < data.result.data.length; i++) {
-              // console.log(data.result.data[i].transaction);
               let mint = data.result.data[i].transaction.toString();
               let product = {
                 code: "",
@@ -104,7 +95,7 @@ const GalleryPage = () => {
               fetch('https://api-devnet.solscan.io/account?address=' + mint)
                 .then(response => response.json())
                 .then(data => {
-                  console.log(data.data);
+                  //console.log(data.data);
                   let tokenInfo = data.data.tokenInfo;
                   let uri = data.data.metadata.data.uri;
                   product.code = tokenInfo.name;
@@ -125,20 +116,38 @@ const GalleryPage = () => {
                   console.log(error.message);
                 });
 
-              products.push(product);              
-            }            
-            console.log(products);   
-            // setDisplayedProducts(products);                 
-            // setDisplayedProducts(products.slice(0, perPage));
+              products.push(product);
+            }
+            console.log(products);
+            numberOfPages = (products.length % perPage === 0) ? parseInt(products.length / perPage) : parseInt(products.length / perPage) + 1;
+            console.log(products.slice(0, perPage))
+            setDisplayedProducts(products.slice(0, perPage));
           }
           else {
             console.log(data.result.message);
           }
 
         });
-    })();
-    // setDisplayedProducts(products)
-  });
+    }
+
+    fetchData()
+
+  }, []);
+
+
+  console.log(displayedProducts)
+
+
+
+
+  const updatePage = ({ selected }) => {
+    console.log(selected)
+    selected = selected + 1;
+    setDisplayedProducts(products.slice((selected - 1) * perPage, (selected * perPage)))
+    console.log(displayedProducts)
+  }
+
+
   return (
     <div className='light-bg'>
       <Row className='gallery-content light-bg mr-0'>
@@ -149,7 +158,7 @@ const GalleryPage = () => {
           <h1>#REF<span className='primary-text'>1</span>ECT</h1>
           <p>
             Here the physics of implosion is explored to create a dynamic movement on the canvas, mimicking the life force of nature.
-          </p>          
+          </p>
         </Col>
         <Col lg={3}></Col>
         <Col lg={3}></Col>
@@ -172,7 +181,7 @@ const GalleryPage = () => {
             ))} */}
             {displayedProducts.map((product, i) => (
               <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
-                <GalleryCard src={product.src} code={product.code} />
+                <GalleryCard product={product} />
               </Col>
             ))}
           </Row>
