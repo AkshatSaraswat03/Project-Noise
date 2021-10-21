@@ -35,7 +35,7 @@ const HomePage = () => {
               </div>
               <div className='mint-section'>
                 <div className='mint-container'>
-                  <GoToMintActive />
+                  <GoToMintInactive />
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@ const HomePage = () => {
               <img src={mobile_hero_gif} alt='gif' className='gifMobile' />
             </div>
             <div className='mobileMintComponent p-0'>
-              <GoToMintActive />
+              <GoToMintInactive />
             </div>
           </Col>
 

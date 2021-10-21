@@ -9,7 +9,7 @@ const GoToMintInactive = () => {
       <p>
         A set of 2,222 generative art pieces on Solana blockchain, exploring noise as a determining variable.
       </p>
-      <Button variant='secondary' disabled className='btn-primary2 m-0 btn-block'> GO TO MINT PAGE </Button>
+      <Button variant='secondary' disabled className='btn-primary2 m-0 btn-block'> SOLD OUT ! </Button>
       {/* <div className='cardDiv m-0 p-2' id='perPieceAmt'>2 SOL per piece</div> */}
       <div className='calender m-0'>
         <div className='text-center cardDivLarge text-white p-2'>21st OCT 2021</div>
