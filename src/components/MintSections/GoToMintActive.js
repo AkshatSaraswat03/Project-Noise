@@ -13,9 +13,9 @@ const GoToMintActive = ({ location }) => {
       <p>
         A set of 2,222 generative art pieces on Solana blockchain, exploring noise as a determining variable.
       </p>
-      <LinkContainer to='/mint'>
-        <Button variant='secondary' className='btn-primary2 m-0 btn-block'> GO TO MINT PAGE </Button>
-      </LinkContainer>
+      {/* <LinkContainer to='/'> */}
+      <Button variant='secondary' className='btn-primary2 m-0 btn-block'> <a style={{ textDecoration: 'none', color: '#000000' }} href='https://mint.projectnoise.io/'>GO TO MINT PAGE</a> </Button>
+      {/* </LinkContainer> */}
       <div className='calender m-0'>
         <div className='text-center cardDivLarge text-white p-2'>21st OCT 2021</div>
         <Row className='p-1 cardDivSmall'>
