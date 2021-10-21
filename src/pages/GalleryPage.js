@@ -9,74 +9,20 @@ import './gallery.css'
 
 const GalleryPage = () => {
 
-  let products = [];
-  // const products = [
-  //   {
-  //     src: '/GalleryImages/gallery1.png',
-  //     code: '#0001',
-  //     traits: []
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery2.png',
-  //     code: '#0002'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery3.png',
-  //     code: '#0003'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery4.png',
-  //     code: '#0004'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery5.png',
-  //     code: '#0005'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery6.png',
-  //     code: '#0006'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery7.png',
-  //     code: '#0007'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery8.png',
-  //     code: '#0008'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery9.png',
-  //     code: '#0009'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery1.png',
-  //     code: '#0010'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery2.png',
-  //     code: '#0011'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery4.png',
-  //     code: '#0012'
-  //   },
-  //   {
-  //     src: '/GalleryImages/gallery3.png',
-  //     code: '#0013'
-  //   },
-
-  // ]
-
   const perPage = 6;
-  let numberOfPages = 0
+  const [allProducts, setAllProducts] = useState([]);
+  const [numberOfPages, setNumberOfPages] = useState(0)
   // const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
   const [displayedProducts, setDisplayedProducts] = useState([]);
   let imageUri = "";
 
   useEffect(() => {
     async function fetchData() {
+
+      let products = [];
+
       //TODO: update details for production server
-      fetch('https://mintapi.projectnoise.io:8443/WalletPOC/w2/rest/v1/wallets')
+      await fetch('https://mintapi.projectnoise.io:8443/WalletPOC/w2/rest/v1/wallets')
         .then(response => response.json())
         .then(data => {
 
@@ -118,9 +64,14 @@ const GalleryPage = () => {
 
               products.push(product);
             }
-            console.log(products);
-            numberOfPages = (products.length % perPage === 0) ? parseInt(products.length / perPage) : parseInt(products.length / perPage) + 1;
-            console.log(products.slice(0, perPage))
+            // console.log(products);
+            setAllProducts(products)
+            console.log(allProducts)
+            let num = (products.length % perPage === 0) ? parseInt(products.length / perPage) : parseInt(products.length / perPage) + 1;
+            console.log(num)
+            setNumberOfPages(num)
+
+            // console.log(products.slice(0, perPage))
             setDisplayedProducts(products.slice(0, perPage));
           }
           else {
@@ -136,14 +87,15 @@ const GalleryPage = () => {
 
 
   console.log(displayedProducts)
-
-
-
+  console.log(allProducts)
+  console.log(numberOfPages)
 
   const updatePage = ({ selected }) => {
     console.log(selected)
     selected = selected + 1;
-    setDisplayedProducts(products.slice((selected - 1) * perPage, (selected * perPage)))
+    console.log(displayedProducts)
+    console.log(allProducts)
+    setDisplayedProducts(allProducts.slice((selected - 1) * perPage, (selected * perPage)))
     console.log(displayedProducts)
   }
 
