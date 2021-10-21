@@ -10,6 +10,16 @@
   border-image-slice: 1;
 }
 
+.card-image{
+  background: url('../../assets/art1.png') center;
+
+  height: 100% !important;
+  width: 100% !important;
+  min-width: 200px;
+  min-height: 200px;
+  overflow: hidden;
+}
+
 .card-image img{
   text-align: center;
   max-width: 100%;

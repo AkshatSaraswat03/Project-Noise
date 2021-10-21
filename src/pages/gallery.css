@@ -1,7 +1,8 @@
 .gallery-content{
   margin-top: 0px;
   padding-top: 70px;
-  padding-bottom: 60px;
+  padding-bottom: 90px;
+  min-height: 95vh;
 }
 
 .gallery-content p{

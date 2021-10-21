@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap'
 import GalleryCard from '../components/GalleryCard/GalleryCard';
 import Paginate from '../components/Pagination/Paginate';
@@ -9,11 +9,13 @@ import './gallery.css'
 
 const GalleryPage = () => {
 
-  const perPage = 6;
+  const perPage = 10;
   const [allProducts, setAllProducts] = useState([]);
   const [numberOfPages, setNumberOfPages] = useState(0)
   // const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
   const [displayedProducts, setDisplayedProducts] = useState([]);
+  const [loading, setLoading] = useState(true)
+  const [dummy, setDummy] = useState(false)
   let imageUri = "";
 
   useEffect(() => {
@@ -38,10 +40,9 @@ const GalleryPage = () => {
               };
               //get NFT details from mint - 
               //TODO: update details for mainnet
-              fetch('https://api-devnet.solscan.io/account?address=' + mint)
+              fetch('https://api.solscan.io/account?address=' + mint)
                 .then(response => response.json())
                 .then(data => {
-                  //console.log(data.data);
                   let tokenInfo = data.data.tokenInfo;
                   let uri = data.data.metadata.data.uri;
                   product.code = tokenInfo.name;
@@ -64,19 +65,20 @@ const GalleryPage = () => {
 
               products.push(product);
             }
-            // console.log(products);
             setAllProducts(products)
-            console.log(allProducts)
+            // console.log(allProducts)
             let num = (products.length % perPage === 0) ? parseInt(products.length / perPage) : parseInt(products.length / perPage) + 1;
-            console.log(num)
+            // console.log(num)
             setNumberOfPages(num)
 
             // console.log(products.slice(0, perPage))
             setDisplayedProducts(products.slice(0, perPage));
+            setLoading(false)
           }
           else {
             console.log(data.result.message);
           }
+
 
         });
     }
@@ -89,20 +91,17 @@ const GalleryPage = () => {
   console.log(displayedProducts)
   console.log(allProducts)
   console.log(numberOfPages)
+  console.log(loading)
 
   const updatePage = ({ selected }) => {
-    console.log(selected)
     selected = selected + 1;
-    console.log(displayedProducts)
-    console.log(allProducts)
     setDisplayedProducts(allProducts.slice((selected - 1) * perPage, (selected * perPage)))
-    console.log(displayedProducts)
   }
 
 
   return (
-    <div className='light-bg'>
-      <Row className='gallery-content light-bg mr-0'>
+    <div className='light-bg gallery-content'>
+      <Row className=' light-bg mr-0'>
         <Col lg={3}></Col>
 
         <Col className='px-3'>
@@ -131,7 +130,7 @@ const GalleryPage = () => {
                 <GalleryCard src={product.src} code={product.code} />
               </Col>
             ))} */}
-            {displayedProducts.map((product, i) => (
+            {!loading && displayedProducts.map((product, i) => (
               <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
                 <GalleryCard product={product} />
               </Col>

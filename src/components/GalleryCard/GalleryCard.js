@@ -62,11 +62,11 @@ const GalleryCard = ({ product }) => {
                   <h5 className='subheading-1'>Traits</h5>
                   <Row className='text-1'>
                     <Col className='fade-text'>Category</Col>
-                    <Col className='text-end'>{type}<span className='fade-text'>(1777)</span></Col>
+                    <Col className='text-end'>{type}</Col>
                   </Row>
                   <Row>
                     <Col className='fade-text'>Color</Col>
-                    <Col className='text-end'>{color} <span className='fade-text'>(22)</span></Col>
+                    <Col className='text-end'>{color}</Col>
                   </Row>
                 </Col>
               </Row>
