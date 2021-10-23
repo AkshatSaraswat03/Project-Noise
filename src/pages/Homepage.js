@@ -156,12 +156,12 @@ const HomePage = () => {
 
             <h1 className='m-0'>WHY ART?</h1>
             <p>
-              "We don't read and write poetry because it's cute. We read and write poetry because we are members of human race.<br />
+              "We don't read and write poetry because it's cute. We read and write poetry because we are members of the human race.<br />
               And the human race is filled with passion <br />
               And medicine, law, buisness, engineering, these are noble pursuits and necessary to sustain life.
             </p>
             <p>
-              But poetry, beauty, romance, love, these are what we stay alive for. To quote from Whitman "O me! O life!... of the questions of thsese recurring; of the endless trains of the faithless... of cities filled with the foolish; what good amid these, O me, O life?"
+              But poetry, beauty, romance, love, these are what we stay alive for. To quote from Whitman "O me! O life!... of the questions of these recurring; of the endless trains of the faithless... of cities filled with the foolish; what good amid these, O me, O life?"
             </p>
             <p>
               Answer. That you are here - that life exists, and identity; that the powerful play goes on and you may contribute a verse. That the powerful play *goes on* and you may contribute a verse. What will your verse be?"
