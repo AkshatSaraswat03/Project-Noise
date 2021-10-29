@@ -816,7 +816,6 @@ const GalleryPage = () => {
       console.log("acdbef")
     }
     alignpages();
-    // console.log(list)
   }, [])
 
 
@@ -836,7 +835,8 @@ const GalleryPage = () => {
           <h3>THE ORIGIN SERIES</h3>
           <h1>#REF<span className='primary-text'>1</span>ECT</h1>
           <p>
-            Here the physics of implosion is explored to create a dynamic movement on the canvas, mimicking the life force of nature.
+            It is a journey, a constant change, a re-evaluation.<br />
+            It is a whole wide spectrum beginning from clean lines and ending up on completely diffused noise.
           </p>
         </Col>
         <Col lg={3}></Col>
@@ -870,7 +870,7 @@ const GalleryPage = () => {
         <Col lg={6} className='text-center'>
           {numberOfPages > 1 && <ReactPaginate
             pageCount={numberOfPages}
-            pageRangeDisplayed={1}
+            pageRangeDisplayed={2}
             marginPagesDisplayed={1}
             onPageChange={updatePage}
             containerClassName="pagination"
