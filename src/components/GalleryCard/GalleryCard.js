@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
-import { Modal, Button, Row, Col } from 'react-bootstrap'
+import React, { useState, useRef } from 'react'
+import { Modal, Button, Row, Col, Overlay } from 'react-bootstrap'
 
 import './GalleryCard.css'
 
 const GalleryCard = ({ product }) => {
   const [show, setShow] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
   const [image, setImage] = useState('');
   const [imgCode, setImgCode] = useState('');
   const [owner, setOwner] = useState('');
   const [color, setColor] = useState('');
   const [type, setType] = useState('');
+  const target = useRef(null);
 
 
   const updateImgandCode = (product) => {
@@ -19,7 +21,7 @@ const GalleryCard = ({ product }) => {
     setColor(product.traits[0].value)
     setType(product.traits[1].value)
   }
-  console.log(product)
+  // console.log(product)
 
   return (
     <>
@@ -56,7 +58,8 @@ const GalleryCard = ({ product }) => {
                   </div>
                   <Row className='ownedBy'>
                     <Col className='fade-text'>Owned By:</Col>
-                    <Col className='text-end'>{owner}</Col>
+                    <Col className='text-end web-owner' ref={target} onClick={() => { navigator.clipboard.writeText(`${owner}`); setShowTooltip(!showTooltip) }}>{owner}</Col>
+                    <Col className='text-end mobile-owner' ref={target} onClick={() => { navigator.clipboard.writeText(`${owner}`); setShowTooltip(!showTooltip) }}>{owner.substr(0, 3) + " ... " + owner.substr(owner.length - 3)}</Col>
                   </Row>
                   <div className='hrdiv'></div>
                   <h5 className='subheading-1'>Traits</h5>

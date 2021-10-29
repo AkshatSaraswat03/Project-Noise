@@ -21,6 +21,19 @@
   margin: 36px 0px;
 }
 
+.outline-div{
+  background: linear-gradient(60deg, #0EFFB7, #FF0D0D, #FFFF00) !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  border: solid 2px white;
+  border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00) !important;
+  border-image-slice: 1 !important;
+  font-size: 24px !important;
+  padding: 16px 0 !important;
+  text-align: center;
+  width: 100%;
+}
+
 .calender{
   margin-top: 28px !important;
   border-top: solid 2px transparent !important;

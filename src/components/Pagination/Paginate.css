@@ -1,8 +1,10 @@
 .pagination{
   margin-bottom: 50px ;
-  /* display: flex;
-  justify-content: space-between; */
-  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100% !important;
+  /* margin-left: auto !important;
+  margin-right: auto !important; */
 }
 
 
@@ -15,11 +17,11 @@
 
 .page-item:first-child .page-link{
   opacity: 1;
-  margin-right: 180px;
+  margin-right: auto;
 }
 .page-item:last-child .page-link{
   opacity: 1;
-  margin-left: 180px;
+  margin-left: auto;
 }
 
 .page-link:hover{

@@ -1,7 +1,7 @@
 .gallery-content{
   margin-top: 0px;
   padding-top: 70px;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
   min-height: 95vh;
 }
 
@@ -11,7 +11,7 @@
 
 .sticky-row{
   position: sticky;
-  top: 0px;
+  top: 80px;
   background: #F2F2F2;
   padding-top: 20px;
   margin-bottom: 30px;
@@ -23,4 +23,11 @@
   border-bottom: solid 2px transparent !important;
   border-image: linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00) !important;
   border-image-slice: 1 !important;
+}
+
+@media screen and (max-width: 812px) {
+  .sticky-row{
+    top: 60px !important;
+  }
+
 }
