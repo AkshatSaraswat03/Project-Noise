@@ -59,7 +59,7 @@ const GalleryCard = ({ product }) => {
                   <Row className='ownedBy'>
                     <Col className='fade-text'>Owned By:</Col>
                     <Col className='text-end web-owner' ref={target} onClick={() => { navigator.clipboard.writeText(`${owner}`); setShowTooltip(!showTooltip) }}>{owner}</Col>
-                    <Col className='text-end mobile-owner' ref={target} onClick={() => { navigator.clipboard.writeText(`${owner}`); setShowTooltip(!showTooltip) }}>{owner.substr(0, 3) + " ... " + owner.substr(owner.length - 3)}</Col>
+                    <Col className='text-end mobile-owner' ref={target} onClick={() => { navigator.clipboard.writeText(`${owner}`); setShowTooltip(!showTooltip) }}>{owner.substr(0, 3) + "..." + owner.substr(owner.length - 3)}</Col>
                   </Row>
                   <div className='hrdiv'></div>
                   <h5 className='subheading-1'>Traits</h5>

@@ -125,7 +125,7 @@ const HomePage = () => {
               REF1ECT is the first of many curations coming ahead. This series is conceived by Project Noise itself.
             </p>
             <p>
-              2222 unique synaesthetic artworks stored immutably on Solana blockchain.REF1ECT is a whole wide spectrum beginning from clean lines and ending up on completely diffused noise and this journey is what we present to you.
+              2222 unique synaesthetic artworks stored on Solana blockchain.REF1ECT is a whole wide spectrum beginning from clean lines and ending up on completely diffused noise and this journey is what we present to you.
             </p>
             <p>
               The aesthetics of the outputs incidentally resemble the movement of water as if it was captured onto a canvas and frozen in time.
