@@ -17,7 +17,7 @@ const Soldout2 = () => {
         <Row className='p-1 cardDivSmall'>
           <Col xs={10} className='p-0 small-text'>Magic Eden</Col>
           <Col xs={2}>
-            <a href='https://magicden.io/marketplace/project_noise'><img src={link_arrow} alt='link' /></a>
+            <a href='https://magiceden.io/marketplace/project_noise'><img src={link_arrow} alt='link' /></a>
           </Col>
         </Row>
 

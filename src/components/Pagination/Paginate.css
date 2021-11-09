@@ -13,15 +13,16 @@
   opacity: 0.4;
   border: none;
   background: #F2F2F2;
+  padding: 5px;
 }
 
 .page-item:first-child .page-link{
   opacity: 1;
-  margin-right: auto;
+  margin-right: 180px;
 }
 .page-item:last-child .page-link{
   opacity: 1;
-  margin-left: auto;
+  margin-left: 180px;
 }
 
 .page-link:hover{
@@ -43,10 +44,10 @@
 
   .page-item:first-child .page-link{
     opacity: 1;
-    margin-right: auto;
+    margin-right: 20px;
   }
   .page-item:last-child .page-link{
     opacity: 1;
-    margin-left: auto;
+    margin-left: 20px;
   }
 }

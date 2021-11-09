@@ -25,6 +25,19 @@
   border-image-slice: 1 !important;
 }
 
+.form-select{
+  border: solid 2px black !important;
+  border-radius: 0 !important;
+}
+
+
+option{
+  color: rgba(0, 0, 0, 0.4);
+  
+}
+
+
+
 @media screen and (max-width: 812px) {
   .sticky-row{
     top: 60px !important;
