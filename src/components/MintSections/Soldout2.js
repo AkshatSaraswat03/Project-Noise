@@ -6,6 +6,7 @@ import './Soldout2.css'
 const Soldout2 = () => {
   return (
     <div className='dark-bg mintCard'>
+
       <h1>#REF<span className='primary-text'>1</span>ECT</h1>
       <p>
         A set of 2,222 generative art pieces on Solana blockchain, exploring noise as a determining variable.
