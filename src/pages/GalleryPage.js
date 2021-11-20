@@ -1,4 +1,4 @@
-import {useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Row, Col, Form } from 'react-bootstrap'
 import GalleryCard from '../components/GalleryCard/GalleryCard';
 import Paginate from '../components/Pagination/Paginate';
@@ -11,9 +11,9 @@ import allProducts from '../Data.json'
 import { ConnectionProvider, WalletProvider, useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { WalletAdapterNetwork, WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import {
-  getPhantomWallet,  
+  getPhantomWallet,
   getSolflareWallet,
-  getSolletWallet,  
+  getSolletWallet,
 } from '@solana/wallet-adapter-wallets';
 import {
   WalletModalProvider,
@@ -31,62 +31,70 @@ const GalleryPage = () => {
   const [products, setProducts] = useState(allProducts);
 
   const [numberOfPages, setNumberOfPages] = useState(0)
-  const [displayedProducts, setDisplayedProducts] = useState(allProducts.slice(0, perPage));
+  const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
+
 
 
   // search for traits
   function getColors(allProducts) {
-    // let colorsArr = products.filter((v, i, self) => {
-    //   return i === self.indexOf(v)
-    // })
-    // console.log(colorsArr)
-
-    // return colorsArr;
-
     let colorsArr = [...new Set(allProducts.map(x => x.traits[0].value))]
     return colorsArr
-
   }
 
+  //search for types
   function getType() {
-    // let colorsArr = products.filter((v, i, self) => {
-    //   return i === self.indexOf(v)
-    // })
-    // console.log(colorsArr)
-
-    // return colorsArr;
-
-    let colorsArr = [...new Set(allProducts.map(x => x.traits[0].value))]
-    return colorsArr
+    let typeArr = [...new Set(allProducts.map(x => x.traits[1].value))]
+    return typeArr
   }
 
 
   useEffect(() => {
     async function alignpages() {
-      setNumberOfPages(allProducts.length / perPage);
+      setNumberOfPages(products.length / perPage);
       console.log(numberOfPages)
       console.log("acdbef")
     }
     alignpages();
-  }, [])
+  }, [displayedProducts, products, numberOfPages])
 
 
   const updatePage = ({ selected }) => {
     selected = selected + 1;
     console.log(selected)
-    setDisplayedProducts(allProducts.slice((selected - 1) * perPage, (selected * perPage)))
-  }
-
-  const typeChange = (e) => {
-    console.log(e.target.value)
-    setProducts(allProducts.filter(product => product.traits[1].value === undefined || product.traits[1].value === e.target.value))
     console.log(products)
-    console.log(allProducts)
+    setDisplayedProducts(products.slice((selected - 1) * perPage, (selected * perPage)))
   }
 
-  const colorChange = (e) => {
-    console.log(e.target.value)
 
+
+  async function changeProducts(value, type) {
+    //type
+    //0 - color
+    //1 - type
+    await setProducts(allProducts.filter(product => product.traits[type].value === value))
+    console.log(products)
+
+  }
+
+  const typeChange = async (e) => {
+    //console.log(e.target.value)
+    //await changeProducts(e.target.value, 1)
+    await setProducts(allProducts.filter(product => product.traits[1].value === e.target.value), () => {
+      console.log(products)
+    })
+    await setDisplayedProducts(products.slice(0, perPage))
+    // console.log(allProducts)
+    //console.log(getType())
+  }
+
+
+
+
+
+  const colorChange = async (e) => {
+    console.log(e.target.value)
+    await changeProducts(e.target.value, 0)
+    console.log(getColors())
   }
 
   const { connection } = useConnection();
@@ -104,9 +112,9 @@ const GalleryPage = () => {
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking --
   // Only the wallets you configure here will be compiled into your application
   const wallets = useMemo(() => [
-    getPhantomWallet(),    
+    getPhantomWallet(),
     getSolletWallet({ network }),
-    getSolflareWallet(),        
+    getSolflareWallet(),
   ], [network]);
 
 
@@ -125,7 +133,7 @@ const GalleryPage = () => {
                   It is a journey, a constant change, a re-evaluation.<br />
                   It is a whole wide spectrum beginning from clean lines and ending up on completely diffused noise.
                 </p>
-                <WalletMultiButton  />
+                {/* <WalletMultiButton /> */}
               </Col>
               <Col lg={3}></Col>
               <Col lg={3}></Col>
@@ -141,12 +149,12 @@ const GalleryPage = () => {
                         <Form.Group>
                           <Form.Control as="select" className='form-select' onChange={typeChange} aria-label="Default select example">
                             <option value="all">Type: All</option>
-                            <option value="washedone">Washed One</option>
-                            <option value="washedtwo">Washed Two</option>
-                            <option value="rippleone">Ripple One</option>
-                            <option value="rippletwo">Ripple Two</option>
-                            <option value="ripplethree">Ripple Three</option>
-                            <option value="splitthree">Split Three</option>
+                            <option value="Washed One">Washed One</option>
+                            <option value="Washed Two">Washed Two</option>
+                            <option value="Ripple One">Ripple One</option>
+                            <option value="Ripple Two">Ripple Two</option>
+                            <option value="Ripple Three">Ripple Three</option>
+                            <option value="Split Three">Split Three</option>
                           </Form.Control>
                         </Form.Group>
 
@@ -183,8 +191,6 @@ const GalleryPage = () => {
               <Col lg={3}></Col>
               <Col lg={6} className='px-3'>
                 <Row className='mr-0'>
-
-
                   {displayedProducts.map((product, i) => (
                     <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
                       <GalleryCard product={product} />
@@ -221,9 +227,9 @@ const GalleryPage = () => {
             </Row>
 
           </div>
-          </WalletModalProvider>
-       </WalletProvider>
-     </ConnectionProvider>
+        </WalletModalProvider>
+      </WalletProvider>
+    </ConnectionProvider>
   );
 };
 
