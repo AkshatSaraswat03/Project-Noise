@@ -7,7 +7,7 @@ import ReactPaginate from 'react-paginate'
 import '../components/Pagination/Paginate.css'
 import './gallery.css'
 import allProducts from '../Data.json'
-
+import Select from 'react-select'
 import { ConnectionProvider, WalletProvider, useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { WalletAdapterNetwork, WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import {
@@ -77,9 +77,9 @@ const GalleryPage = () => {
   }
 
   const typeChange = async (e) => {
-    //console.log(e.target.value)
+    console.log(e.value)
     //await changeProducts(e.target.value, 1)
-    await setProducts(allProducts.filter(product => product.traits[1].value === e.target.value), () => {
+    await setProducts(allProducts.filter(product => product.traits[1].value === e.value), () => {
       console.log(products)
     })
     await setDisplayedProducts(products.slice(0, perPage))
@@ -92,8 +92,8 @@ const GalleryPage = () => {
 
 
   const colorChange = async (e) => {
-    console.log(e.target.value)
-    await changeProducts(e.target.value, 0)
+    console.log(e.value)
+    await changeProducts(e.value, 0)
     console.log(getColors())
   }
 
@@ -117,7 +117,54 @@ const GalleryPage = () => {
     getSolflareWallet(),
   ], [network]);
 
+  const customStyles = {
+      option: (provided, state) => ({
+        ...provided,
+        color: state.isFocused ? "black" : "rgba(0, 0, 0, 0.4)",
+        backgroundColor: state.isFocused ? "white" : "white",
+      }),
+      placeholder: () => ({
+        color:  "black" ,
+      }),
+      input: (state)=>({
+        opacity: "0",
+        display:"none",
+      }),
+      control: ()=>({
+        borderTop: "solid 2px black !important",
+        borderLeft: "solid 2px black !important",
+        borderRight: "solid 2px black !important",
+        borderBottom: "solid 2px black !important",
+        borderRadius: "0 !important",
+        display: "flex",
+      }),
+      menu: (provided, state)=>({
+        ...provided,
+        marginTop: "0",
+        borderLeft: "solid 2px black !important",
+        borderRight: "solid 2px black !important",
+        borderBottom: "solid 2px black !important",
+        borderRadius: "0 !important",
+      })
+  }
 
+  const options1 = [
+    { value: 'All', label: 'Type: All' },
+    { value: 'Washed One', label: 'Washed One' },
+    { value: 'Washed Two', label: 'Washed Two' },
+    { value: 'Ripple One', label: 'Ripple One' },
+    { value: 'Ripple Two', label: 'Ripple Two' },
+    { value: 'Ripple Three', label: 'Ripple Three' },
+    { value: 'Split', label: 'Split' },
+  ]
+  const options2 = [
+    { value: 'All', label: 'Color: All' },
+    { value: 'red', label: 'red' },
+    { value: 'cyan', label: 'cyan' },
+    { value: 'yellow', label: 'yello' },
+    { value: 'white', label: 'white' },
+    { value: 'black', label: 'black' },
+  ]
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
@@ -142,13 +189,13 @@ const GalleryPage = () => {
               <Col lg={3}></Col>
               <Col lg={6} className='px-3'>
                 <Row className='p-0'>
-                  {/* <Col lg={9} className='p-0 filters'>
+                  <Col lg={9} className='p-0 filters'>
                     <Row className='p-0'>
                       <Col lg={4}>
 
-                        <Form.Group>
-                          <Form.Control as="select" className='form-select' onChange={typeChange} aria-label="Default select example">
-                            <option value="all">Type: All</option>
+                        {/* <Form.Group>
+                          <Form.Control as="select" className='form-select' style={{color:  ? 'red' : 'blue'}} onChange={typeChange} aria-label="Default select example">
+                            <option style = {customStyles} value="all">Type: All</option>
                             <option value="Washed One">Washed One</option>
                             <option value="Washed Two">Washed Two</option>
                             <option value="Ripple One">Ripple One</option>
@@ -156,13 +203,19 @@ const GalleryPage = () => {
                             <option value="Ripple Three">Ripple Three</option>
                             <option value="Split Three">Split Three</option>
                           </Form.Control>
-                        </Form.Group>
-
-
+                        </Form.Group> */}
+                        <Select
+                          styles={customStyles}
+                          options={options1}
+                          onChange={typeChange} 
+                          
+                          placeholder={options1[0].label}
+                          aria-label="Default select example"
+                        />
                       </Col>
                       <Col lg={4}>
 
-                        <Form.Group>
+                        {/* <Form.Group>
                           <Form.Control as="select" className='form-select' onChange={colorChange} aria-label="Default select example">
                             <option value="all">Color: All</option>
                             <option value="red">Red</option>
@@ -171,15 +224,22 @@ const GalleryPage = () => {
                             <option value="white">White</option>
                             <option value="black">Black</option>
                           </Form.Control>
-                        </Form.Group>
-
+                        </Form.Group> */}
+                        <Select
+                          styles={customStyles}
+                          options={options2}
+                          onChange={colorChange} 
+                          
+                          placeholder={options2[0].label}
+                          aria-label="Default select example"
+                        />
 
 
 
                       </Col>
                       <Col lg={4}></Col>
                     </Row>
-                  </Col> */}
+                  </Col>
                   {/* <Col lg={3} className='p-0'> */}
                   <div className='numberOfPieces'> {allProducts.length} pieces</div>
                   {/* </Col> */}

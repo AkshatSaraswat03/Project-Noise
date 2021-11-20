@@ -29,13 +29,14 @@
   border: solid 2px black !important;
   border-radius: 0 !important;
 }
-
+.select{
+  
+}
 
 option{
   color: rgba(0, 0, 0, 0.4);
   
 }
-
 
 
 @media screen and (max-width: 812px) {
