@@ -4,14 +4,12 @@ import link_arrow from '../assets/link_arrow.png';
 import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
 // import LogoWeb from '../assets/Landingweb
-import web_hero_gif from '../assets/web_hero_gif.gif'
-import mobile_hero_gif from '../assets/mobile_hero_gif.gif'
+import web_hero_gif from '../content/Untitled.png';
+import mobile_hero_gif from '../assets/mobile_hero_gif.gif';
 import HomeCarousel from '../components/Carousel/HomeCarousel';
 
 import GoToMintInactive from '../components/MintSections/GoToMintInactive';
 import GoToMintActive from '../components/MintSections/GoToMintActive';
-import Soldout2 from '../components/MintSections/Soldout2';
-import Soldout1 from '../components/MintSections/Soldout1';
 
 import team1 from '../assets/team1.png'
 import team2 from '../assets/team2.png'
@@ -27,25 +25,23 @@ const newHome = () => {
     <>
       <div className='section-1 dark-bg'>
         <Row className='px-3 m-0'>
-          <Col lg={3}></Col>
+          <Col lg={2}></Col>
 
-          <Col lg={6}>
+          <Col lg={10}>
             <div className='main-section'>
               <div className='mint-sectionnew'>
                 <div className='mint-container'>
-                  <h1>Join the Noise Club!</h1>
+                  <h1 >Join the Noise Club!</h1>
                   <p>
                   To claim the Noise pass you need to burn 6 noise
                   </p>
                   {/* <Button variant='secondary' className='btn-primary2 m-0 btn-block'> SOLD OUT ! </Button> */}
                   <div className='outline-divnew'>Status - 21/100 Claimed</div>
-                  <div className='calender m-0'>
-                    <div className='text-center cardDivLarge text-white p-2'>Go to Burn Portal </div>
-                  </div>
+                    <button className='text-center cardDivLarge text-white p-2' style = {{border: "solid 2px white", width:"20rem"}}>Go to Burn Portal -> </button>
                 </div>
               </div>
-              <div className='gifWeb'>
-                <img src={web_hero_gif} alt='gif' />
+              <div className='gifWeb' style={{marginLeft: "2rem"}}>
+                <img src={web_hero_gif} />
               </div>
             </div>
           </Col>
