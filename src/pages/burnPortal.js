@@ -1,26 +1,12 @@
 import React from 'react';
+import { useState } from "react";
 import { Row, Col, Nav } from 'react-bootstrap';
-import link_arrow from '../assets/link_arrow.png';
-import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
 // import LogoWeb from '../assets/Landingweb
-import web_hero_gif from '../content/Untitled.png';
-import mobile_hero_gif from '../assets/mobile_hero_gif.gif';
-import HomeCarousel from '../components/Carousel/HomeCarousel';
-
-import GoToMintInactive from '../components/MintSections/GoToMintInactive';
-import GoToMintActive from '../components/MintSections/GoToMintActive';
-
-import team1 from '../assets/team1.png'
-import team2 from '../assets/team2.png'
-import team3 from '../assets/team3.png'
-import team4 from '../assets/team4.png'
-
-
-
-import './home.css'
+import './burn.css'
 
 const BurnPortal = () => {
+    const [noise,SetNoise] = useState('-');
   return (
     <>
       <div className='section-2new'>
@@ -30,14 +16,21 @@ const BurnPortal = () => {
             <div>
                 <h2>Burning mechanism to claim Noise Pass!</h2>
                 <ol type="1">
-                    <li>Select 6 noises which you want to burn.</li>
-                    <li>Burn & claim</li>
+                    <li style={{color: "#050505",opacity:"0.7",paddingTop:"7px",paddingBottom:"2px"}}>Select 6 noises which you want to burn.</li>
+                    <li style={{color: "#050505",opacity:"0.7",paddingTop:"7px",paddingBottom:"2px"}}>Burn & claim</li>
                 </ol>
                 <p style={{marginBottom: "43px"}}> NOTE: If you don’t have enough noises -<a href="">buy here</a> </p>
             </div>
-            <div>
-                <h3>My Noises (-)</h3>
+            <div style={{height: "50vh"}}>
+                <div style={{borderBottom: "solid 2px black"}}>
+                    <p>My Noises ({noise})</p>
+                </div>
+                <div>
+                    <button className="burnbutton" style={{marginTop:"43px"}}>Connect Wallet</button>
+                </div>
+                
             </div>
+            
           </Col>
           <Col lg={3} className='p-0'>
           
