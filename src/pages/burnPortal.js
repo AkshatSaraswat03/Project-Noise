@@ -8,7 +8,7 @@ import './burn.css'
 
 const BurnPortal = () => {
     const [noise,SetNoise] = useState('-');
-    const [connect,SetConnect] = useState(false);
+    const [connect,SetConnect] = useState(true);
     const cardInfo = [
       {
           "code": "#1240",
@@ -77,12 +77,11 @@ const BurnPortal = () => {
                 </div>
                 <div>
                     { connect ?
-                        // {cardInfo.map((product, i) => (
-                        //   <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
-                        //     <GalleryCard product={product} />
-                        //   </Col>
-                        // ))}
-                        <div></div>
+                        cardInfo.map((product, i) => (
+                          <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
+                            <SelectCard product={product} />
+                          </Col>
+                        ))
                     :
                     <button className="burnbutton" style={{marginTop:"43px",border:"0"}}>Connect Wallet</button>}
                     
@@ -98,25 +97,20 @@ const BurnPortal = () => {
 
       </div>
 
-      <div className='section-8 dark-bg px-3'>
+      <div className='section-8 px-3'>
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='footer pt-1'>
-            <Row className='pt-0 pb-2'>
-              <Col lg={4} className='footer-brand pt-4 px-0'><p style={{ color: 'white' }}>Project Noise</p></Col>
-              <Col lg={5}></Col>
-              <Col lg={3} className='px-0'>
-                <Row className='m-0 p-0'>
-                  <Col lg={3}></Col>
-                  <Col className='text-center p-0'>
-                    <Nav.Link href='https://twitter.com/Prjctnoise' className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
-                  </Col>
-                  <Col className='text-center p-0'>
-                    <Nav.Link href='https://discord.gg/2AXCqUWX5J' className='social-media-discord'><div className='discord' ></div></Nav.Link>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          { connect ?
+                      <div style={{display: "inline-block", width:"100%", padding:"30px 0 20px 0"}}>
+                        <p style={{float: "left",color:"black"}}>3 Noises selected</p>
+                        <div style={{float: "right"}}>
+                          <button style={{backgroundImage: "linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00)",marginRight: "10px",padding:"10px",border:"0"}}>Burn to Claim Pass!</button>
+                          <button style={{padding:"10px",border:"0"}}>Cancel</button>
+                        </div>
+                      </div>  
+                    :
+                    <div></div>}
           </Col>
           <Col lg={3}></Col>
         </Row>

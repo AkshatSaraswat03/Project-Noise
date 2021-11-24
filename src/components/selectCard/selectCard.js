@@ -1,16 +1,28 @@
 import React, { useState, useRef } from 'react'
 import { Modal, Button, Row, Col, Overlay } from 'react-bootstrap'
-import GalleryCard from '../GalleryCard/GalleryCard';
 
-import './selectCard.css'
+import './selectCard.css';
 
-const SelectCard = () => {
-    
+const SelectCard = ({ product }) => {
+  const [show, setShow] = useState(false);
+  
+
   return (
     <>
-        <div>
-            
+    
+      <div className={show ? 'clickedgallryCard':'gallerycard'} onClick={() => {
+        setShow(!show);
+      }}>
+        <input type="checkbox"  checked={show}/>
+        <div className='card-image'>
+          <img src={product.src} alt='galleryimage' />
         </div>
+        <div className='image-code'>
+          {product.code}
+        </div>
+      </div>
+
+      
     </>
   )
 }
