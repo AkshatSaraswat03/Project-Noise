@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Modal, Button, Row, Col, Overlay,Nav } from 'react-bootstrap'
-import GalleryCard from '../GalleryCard/GalleryCard';
+import GalleryCard from '../components/GalleryCard/GalleryCard';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
 import SelectCard from '../components/selectCard/selectCard'
 // import LogoWeb from '../assets/Landingweb
@@ -8,7 +8,7 @@ import './burn.css'
 
 const BurnPortal = () => {
     const [noise,SetNoise] = useState('-');
-    const [connect,SetConnect] = useState(true);
+    const [connect,SetConnect] = useState(false);
     const cardInfo = [
       {
           "code": "#1240",
