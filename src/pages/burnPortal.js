@@ -26,7 +26,7 @@ const BurnPortal = () => {
                     <p>My Noises ({noise})</p>
                 </div>
                 <div>
-                    <button className="burnbutton" style={{marginTop:"43px"}}>Connect Wallet</button>
+                    <button className="burnbutton" style={{marginTop:"43px",border:"0"}}>Connect Wallet</button>
                 </div>
                 
             </div>

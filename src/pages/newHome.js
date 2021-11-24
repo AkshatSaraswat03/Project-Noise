@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Nav } from 'react-bootstrap';
+import { Row, Col, Nav,Button } from 'react-bootstrap';
 import link_arrow from '../assets/link_arrow.png';
 import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
@@ -37,7 +37,7 @@ const newHome = () => {
                   </p>
                   {/* <Button variant='secondary' className='btn-primary2 m-0 btn-block'> SOLD OUT ! </Button> */}
                   <div className='outline-divnew'>Status - 21/100 Claimed</div>
-                    <button className='text-center cardDivLarge text-white p-2' style = {{border: "solid 2px white", width:"20rem"}}>Go to Burn Portal -> </button>
+                    <Button href="/burnportal" className='text-center cardDivLarge text-white p-2' style = {{ width:"20rem"}}>Go to Burn Portal -> </Button>
                 </div>
               </div>
               <div className='gifWeb' style={{marginLeft: "2rem"}}>
