@@ -20,49 +20,24 @@ import team4 from '../assets/team4.png'
 
 import './home.css'
 
-const newHome = () => {
+const BurnPortal = () => {
   return (
     <>
-      <div className='section-1 dark-bg'>
-        <Row className='px-3 m-0'>
-          <Col lg={2}></Col>
-
-          <Col lg={10}>
-            <div className='main-section'>
-              <div className='mint-sectionnew'>
-                <div className='mint-container'>
-                  <h1 >Join the Noise Club!</h1>
-                  <p>
-                  To claim the Noise pass you need to burn 6 noise
-                  </p>
-                  {/* <Button variant='secondary' className='btn-primary2 m-0 btn-block'> SOLD OUT ! </Button> */}
-                  <div className='outline-divnew'>Status - 21/100 Claimed</div>
-                    <button className='text-center cardDivLarge text-white p-2' style = {{border: "solid 2px white", width:"20rem"}}>Go to Burn Portal -> </button>
-                </div>
-              </div>
-              <div className='gifWeb' style={{marginLeft: "2rem"}}>
-                <img src={web_hero_gif} />
-              </div>
-            </div>
-          </Col>
-          {/* <Col lg={6} className='mobile-section m-0 p-0'>
-            <div className='mobileGifComponent'>
-              <img src={mobile_hero_gif} alt='gif' className='gifMobile' />
-            </div>
-            <div className='mobileMintComponent p-0'>
-              <Soldout2 />
-            </div>
-          </Col> */}
-
-          <Col lg={3}></Col>
-        </Row>
-      </div>
-
       <div className='section-2new'>
         <Row className='px-3 py-0'>
           <Col lg={3} className='p-0'></Col>
           <Col lg={6} className='p-0'>
-            
+            <div>
+                <h2>Burning mechanism to claim Noise Pass!</h2>
+                <ol type="1">
+                    <li>Select 6 noises which you want to burn.</li>
+                    <li>Burn & claim</li>
+                </ol>
+                <p style={{marginBottom: "43px"}}> NOTE: If you don’t have enough noises -<a href="">buy here</a> </p>
+            </div>
+            <div>
+                <h3>My Noises (-)</h3>
+            </div>
           </Col>
           <Col lg={3} className='p-0'>
           
@@ -99,4 +74,4 @@ const newHome = () => {
   );
 };
 
-export default newHome;
+export default BurnPortal;
