@@ -8,6 +8,8 @@ import GalleryPage from './pages/GalleryPage';
 import ArtPage from './pages/ArtPage';
 import MintPage from './pages/MintPage';
 import CheckResult from './pages/CheckResult';
+import newHome from './pages/newHome';
+import BurnPortal from './pages/burnPortal';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route exact path='/art' component={ArtPage} />
         <Route exact path='/mint' component={MintPage} />
         <Route exact path='/whitelist-checker' component={CheckResult} />
+        <Route exact path='/newhome' component={newHome} />
+        <Route exact path='/burnPortal' component={BurnPortal} />
       </Switch>
     </Router>
 
