@@ -77,11 +77,12 @@ const BurnPortal = () => {
                 </div>
                 <div>
                     { connect ?
-                        {cardInfo.map((product, i) => (
-                          <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
-                            <GalleryCard product={product} />
-                          </Col>
-                        ))}
+                        // {cardInfo.map((product, i) => (
+                        //   <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
+                        //     <GalleryCard product={product} />
+                        //   </Col>
+                        // ))}
+                        <div></div>
                     :
                     <button className="burnbutton" style={{marginTop:"43px",border:"0"}}>Connect Wallet</button>}
                     
