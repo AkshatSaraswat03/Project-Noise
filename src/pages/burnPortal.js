@@ -1,12 +1,62 @@
-import React from 'react';
-import { useState } from "react";
-import { Row, Col, Nav } from 'react-bootstrap';
+import React, { useState, useRef } from 'react';
+import { Modal, Button, Row, Col, Overlay,Nav } from 'react-bootstrap'
+import GalleryCard from '../GalleryCard/GalleryCard';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
+import SelectCard from '../components/selectCard/selectCard'
 // import LogoWeb from '../assets/Landingweb
 import './burn.css'
 
 const BurnPortal = () => {
     const [noise,SetNoise] = useState('-');
+    const [connect,SetConnect] = useState(true);
+    const cardInfo = [
+      {
+          "code": "#1240",
+          "owner": "CM1CPAJPZ59VCMtFBP5pdN4LT3MaziYZoaxDSBPTvJ65",
+          "src": "https://arweave.net/TFlPE0iN7DRzItMiGn97C53tMTE2gsg524hySCAi_So",
+          "traits": [
+              {
+                  "trait_type": "Color",
+                  "value": "Yellow"
+              },
+              {
+                  "trait_type": "Type",
+                  "value": "Ripple One"
+              }
+          ]
+      },
+      {
+          "code": "#254",
+          "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+          "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+          "traits": [
+              {
+                  "trait_type": "Color",
+                  "value": "White"
+              },
+              {
+                  "trait_type": "Type",
+                  "value": "Wave Two"
+              }
+          ]
+      },
+      {
+          "code": "#254",
+          "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+          "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+          "traits": [
+              {
+                  "trait_type": "Color",
+                  "value": "White"
+              },
+              {
+                  "trait_type": "Type",
+                  "value": "Wave Two"
+              }
+          ]
+      },
+
+  ];
   return (
     <>
       <div className='section-2new'>
@@ -21,12 +71,20 @@ const BurnPortal = () => {
                 </ol>
                 <p style={{marginBottom: "43px"}}> NOTE: If you don’t have enough noises -<a href="">buy here</a> </p>
             </div>
-            <div style={{height: "50vh"}}>
+            <div style={{minHeight:"50vh"}}>
                 <div style={{borderBottom: "solid 2px black"}}>
                     <p>My Noises ({noise})</p>
                 </div>
                 <div>
-                    <button className="burnbutton" style={{marginTop:"43px",border:"0"}}>Connect Wallet</button>
+                    { connect ?
+                        {cardInfo.map((product, i) => (
+                          <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
+                            <GalleryCard product={product} />
+                          </Col>
+                        ))}
+                    :
+                    <button className="burnbutton" style={{marginTop:"43px",border:"0"}}>Connect Wallet</button>}
+                    
                 </div>
                 
             </div>
