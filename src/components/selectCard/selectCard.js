@@ -13,7 +13,10 @@ const SelectCard = ({ product }) => {
       <div className={show ? 'clickedgallryCard':'gallerycard'} onClick={() => {
         setShow(!show);
       }}>
-        <input type="checkbox"  checked={show}/>
+        <label class="container">
+          <input type="checkbox" checked={show}/>
+          <span class="checkmark"></span>
+        </label>
         <div className='card-image'>
           <img src={product.src} alt='galleryimage' />
         </div>

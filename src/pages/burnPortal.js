@@ -7,8 +7,19 @@ import SelectCard from '../components/selectCard/selectCard'
 import './burn.css'
 
 const BurnPortal = () => {
+  const [show, setShow] = useState(false);
     const [noise,SetNoise] = useState('-');
     const [connect,SetConnect] = useState(true);
+    const [count,SetCount] = useState([]);
+    const countfunc = (product,isSelected) => {
+      console.log(count);
+      if(isSelected){
+        
+      }else{
+        
+      }
+      
+    }
     const cardInfo = [
       {
           "code": "#1240",
@@ -78,7 +89,12 @@ const BurnPortal = () => {
                 <div>
                     { connect ?
                         cardInfo.map((product, i) => (
-                          <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
+                          <Col key={i} sm={12} lg={6} style={{ padding: '5px' }} onClick={() => {
+                            setShow(!show);
+                            
+                            countfunc(product,show);
+
+                          }}>
                             <SelectCard product={product} />
                           </Col>
                         ))
@@ -103,7 +119,7 @@ const BurnPortal = () => {
           <Col lg={6} className='footer pt-1'>
           { connect ?
                       <div style={{display: "inline-block", width:"100%", padding:"30px 0 20px 0"}}>
-                        <p style={{float: "left",color:"black"}}>3 Noises selected</p>
+                        <p style={{float: "left",color:"black"}}>{count.length} Noises selected</p>
                         <div style={{float: "right"}}>
                           <button style={{backgroundImage: "linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00)",marginRight: "10px",padding:"10px",border:"0"}}>Burn to Claim Pass!</button>
                           <button style={{padding:"10px",border:"0"}}>Cancel</button>
