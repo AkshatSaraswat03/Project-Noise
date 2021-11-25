@@ -127,7 +127,7 @@ const BurnPortal = () => {
                         <div style={{float: "right"}}>
                           <button  disabled={count.length<6} 
                           style={{backgroundImage: "linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00)",marginRight: "10px",padding:"10px",border:"0"}} 
-                          onClick={setFinal(!final)}>Burn to Claim Pass!</button>
+                          >Burn to Claim Pass!</button>
                           <button style={{padding:"10px",border:"0"}}>Cancel</button>
                         </div>
                       </div>  
