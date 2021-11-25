@@ -5,16 +5,7 @@ import { ReactComponent as LogoSvg } from '../assets/logo.svg';
 import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
 // import LogoWeb from '../assets/Landingweb
 import web_hero_gif from '../content/Untitled.png';
-import mobile_hero_gif from '../assets/mobile_hero_gif.gif';
-import HomeCarousel from '../components/Carousel/HomeCarousel';
 
-import GoToMintInactive from '../components/MintSections/GoToMintInactive';
-import GoToMintActive from '../components/MintSections/GoToMintActive';
-
-import team1 from '../assets/team1.png'
-import team2 from '../assets/team2.png'
-import team3 from '../assets/team3.png'
-import team4 from '../assets/team4.png'
 
 
 

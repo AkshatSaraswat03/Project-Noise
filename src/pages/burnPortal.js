@@ -1,16 +1,16 @@
 import React, { useState, useRef } from 'react';
-import { Modal, Button, Row, Col, Overlay,Nav } from 'react-bootstrap'
-import GalleryCard from '../components/GalleryCard/GalleryCard';
-import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
+import { Modal, Button, Row, Col, Overlay,Nav } from 'react-bootstrap';
 import SelectCard from '../components/selectCard/selectCard'
 // import LogoWeb from '../assets/Landingweb
 import './burn.css'
+import web_hero_gif from '../content/Untitled.png';
 
 const BurnPortal = () => {
   const [show, setShow] = useState(false);
+  const [final, setFinal] = useState(true);
     const [noise,SetNoise] = useState('-');
     const [connect,SetConnect] = useState(true);
-    const [count,SetCount] = useState([]);
+    const [count,SetCount] = useState([1,2,3,4,5,6]);
     const countfunc = (product,isSelected) => {
       console.log(count);
       if(isSelected){
@@ -88,16 +88,20 @@ const BurnPortal = () => {
                 </div>
                 <div>
                     { connect ?
-                        cardInfo.map((product, i) => (
-                          <Col key={i} sm={12} lg={6} style={{ padding: '5px' }} onClick={() => {
-                            setShow(!show);
-                            
-                            countfunc(product,show);
+                    <Row className='mr-0'>
+                        {cardInfo.map((product, i) => (
+                          
+                            <Col key={i} sm={12} lg={4 } style={{ padding: '5px' }} onClick={() => {
+                              setShow(!show);
+                              
+                              countfunc(product,show);
 
-                          }}>
-                            <SelectCard product={product} />
-                          </Col>
-                        ))
+                            }}>
+                              <SelectCard product={product} />
+                            </Col>
+                          
+                        ))}
+                      </Row>
                     :
                     <button className="burnbutton" style={{marginTop:"43px",border:"0"}}>Connect Wallet</button>}
                     
@@ -121,7 +125,9 @@ const BurnPortal = () => {
                       <div style={{display: "inline-block", width:"100%", padding:"30px 0 20px 0"}}>
                         <p style={{float: "left",color:"black"}}>{count.length} Noises selected</p>
                         <div style={{float: "right"}}>
-                          <button style={{backgroundImage: "linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00)",marginRight: "10px",padding:"10px",border:"0"}}>Burn to Claim Pass!</button>
+                          <button  disabled={count.length<6} 
+                          style={{backgroundImage: "linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00)",marginRight: "10px",padding:"10px",border:"0"}} 
+                          onClick={setFinal(!final)}>Burn to Claim Pass!</button>
                           <button style={{padding:"10px",border:"0"}}>Cancel</button>
                         </div>
                       </div>  
@@ -131,7 +137,25 @@ const BurnPortal = () => {
           <Col lg={3}></Col>
         </Row>
       </div>
-
+      <Modal show={final} fullscreen='true' onHide={() => setFinal(false)}>
+        <Modal.Header closeButton className='custom'>
+          <Modal.Title className='modal-title'></Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modal-body'>
+          <Row >
+            <Col lg={3}></Col>
+            <Col lg={6} className='px-3'>
+              <h1 className='primary-text' style={{textAlign:"center",fontSize:"28px !important"}}>Congratulations! <br/>
+On joining the club!</h1>
+              <div className='gifWeb' style={{width:"459px",height:"459px",margin:"20px 140px"}}>
+                <img src={web_hero_gif} />
+              </div>
+            <p style={{color:"black",textAlign:"center"}}>Thanks for participating!<br/>See you on the other side   </p>
+            </Col>
+            <Col lg={3}></Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };
