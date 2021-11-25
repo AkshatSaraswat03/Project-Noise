@@ -4,70 +4,120 @@ import SelectCard from '../components/selectCard/selectCard'
 // import LogoWeb from '../assets/Landingweb
 import './burn.css'
 import web_hero_gif from '../content/Untitled.png';
-
+let count = [];
+const cardInfo = [
+  {
+      "code": "#1240",
+      "owner": "CM1CPAJPZ59VCMtFBP5pdN4LT3MaziYZoaxDSBPTvJ65",
+      "src": "https://arweave.net/TFlPE0iN7DRzItMiGn97C53tMTE2gsg524hySCAi_So",
+      "traits": [
+          {
+              "trait_type": "Color",
+              "value": "Yellow"
+          },
+          {
+              "trait_type": "Type",
+              "value": "Ripple One"
+          }
+      ]
+  },
+  {
+      "code": "#254",
+      "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+      "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+      "traits": [
+          {
+              "trait_type": "Color",
+              "value": "White"
+          },
+          {
+              "trait_type": "Type",
+              "value": "Wave Two"
+          }
+      ]
+  },
+  {
+      "code": "#1254",
+      "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+      "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+      "traits": [
+          {
+              "trait_type": "Color",
+              "value": "White"
+          },
+          {
+              "trait_type": "Type",
+              "value": "Wave Two"
+          }
+      ]
+  },
+  {
+    "code": "#1240",
+    "owner": "CM1CPAJPZ59VCMtFBP5pdN4LT3MaziYZoaxDSBPTvJ65",
+    "src": "https://arweave.net/TFlPE0iN7DRzItMiGn97C53tMTE2gsg524hySCAi_So",
+    "traits": [
+        {
+            "trait_type": "Color",
+            "value": "Yellow"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Ripple One"
+        }
+    ]
+},
+{
+    "code": "#254",
+    "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+    "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+    "traits": [
+        {
+            "trait_type": "Color",
+            "value": "White"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Wave Two"
+        }
+    ]
+},
+{
+    "code": "#1254",
+    "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+    "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+    "traits": [
+        {
+            "trait_type": "Color",
+            "value": "White"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Wave Two"
+        }
+    ]
+},
+];
 const BurnPortal = () => {
   const [show, setShow] = useState(false);
-  const [final, setFinal] = useState(true);
+  const [final, setFinal] = useState(false);
     const [noise,SetNoise] = useState('-');
     const [connect,SetConnect] = useState(true);
-    const [count,SetCount] = useState([1,2,3,4,5,6]);
+    
     const countfunc = (product,isSelected) => {
-      console.log(count);
+    //   console.log(product);
+    //   console.log(isSelected);
+      // console.log(count);
       if(isSelected){
-        
+        const filteredPeople = count.filter((item) => item !== product);
+        count = filteredPeople;
       }else{
-        
+        count.push(product);
       }
+
+      console.log(count);
       
     }
-    const cardInfo = [
-      {
-          "code": "#1240",
-          "owner": "CM1CPAJPZ59VCMtFBP5pdN4LT3MaziYZoaxDSBPTvJ65",
-          "src": "https://arweave.net/TFlPE0iN7DRzItMiGn97C53tMTE2gsg524hySCAi_So",
-          "traits": [
-              {
-                  "trait_type": "Color",
-                  "value": "Yellow"
-              },
-              {
-                  "trait_type": "Type",
-                  "value": "Ripple One"
-              }
-          ]
-      },
-      {
-          "code": "#254",
-          "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
-          "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
-          "traits": [
-              {
-                  "trait_type": "Color",
-                  "value": "White"
-              },
-              {
-                  "trait_type": "Type",
-                  "value": "Wave Two"
-              }
-          ]
-      },
-      {
-          "code": "#254",
-          "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
-          "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
-          "traits": [
-              {
-                  "trait_type": "Color",
-                  "value": "White"
-              },
-              {
-                  "trait_type": "Type",
-                  "value": "Wave Two"
-              }
-          ]
-      },
-
-  ];
+    
   return (
     <>
       <div className='section-2new'>
@@ -94,10 +144,9 @@ const BurnPortal = () => {
                             <Col key={i} sm={12} lg={4 } style={{ padding: '5px' }} onClick={() => {
                               setShow(!show);
                               
-                              countfunc(product,show);
 
                             }}>
-                              <SelectCard product={product} />
+                              <SelectCard product={product} onSelect={countfunc}/>
                             </Col>
                           
                         ))}
@@ -126,6 +175,7 @@ const BurnPortal = () => {
                         <p style={{float: "left",color:"black"}}>{count.length} Noises selected</p>
                         <div style={{float: "right"}}>
                           <button  disabled={count.length<6} 
+                          onClick={()=>{setFinal(true);}}
                           style={{backgroundImage: "linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00)",marginRight: "10px",padding:"10px",border:"0"}} 
                           >Burn to Claim Pass!</button>
                           <button style={{padding:"10px",border:"0"}}>Cancel</button>
