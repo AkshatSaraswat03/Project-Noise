@@ -1,8 +1,5 @@
 import React from 'react';
 import { Row, Col, Nav,Button } from 'react-bootstrap';
-import link_arrow from '../assets/link_arrow.png';
-import { ReactComponent as LogoSvg } from '../assets/logo.svg';
-import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
 // import LogoWeb from '../assets/Landingweb
 import web_hero_gif from '../content/Untitled.png';
 
