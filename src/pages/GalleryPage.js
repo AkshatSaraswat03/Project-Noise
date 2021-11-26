@@ -204,14 +204,14 @@ const GalleryPage = () => {
                             <option value="Split Three">Split Three</option>
                           </Form.Control>
                         </Form.Group> */}
-                        <Select
+                        {/* <Select
                           styles={customStyles}
                           options={options1}
                           onChange={typeChange} 
                           
                           placeholder={options1[0].label}
                           aria-label="Default select example"
-                        />
+                        /> */}
                       </Col>
                       <Col lg={4}>
 
@@ -225,14 +225,14 @@ const GalleryPage = () => {
                             <option value="black">Black</option>
                           </Form.Control>
                         </Form.Group> */}
-                        <Select
+                        {/* <Select
                           styles={customStyles}
                           options={options2}
                           onChange={colorChange} 
                           
                           placeholder={options2[0].label}
                           aria-label="Default select example"
-                        />
+                        /> */}
 
 
 

@@ -1,62 +1,123 @@
 import React, { useState, useRef } from 'react';
-import { Modal, Button, Row, Col, Overlay,Nav } from 'react-bootstrap'
-import GalleryCard from '../components/GalleryCard/GalleryCard';
-import { ReactComponent as Logo2Svg } from '../assets/logo2.svg';
+import { Modal, Button, Row, Col, Overlay,Nav } from 'react-bootstrap';
 import SelectCard from '../components/selectCard/selectCard'
 // import LogoWeb from '../assets/Landingweb
 import './burn.css'
-
+import web_hero_gif from '../content/Untitled.png';
+let count = [];
+const cardInfo = [
+  {
+      "code": "#1240",
+      "owner": "CM1CPAJPZ59VCMtFBP5pdN4LT3MaziYZoaxDSBPTvJ65",
+      "src": "https://arweave.net/TFlPE0iN7DRzItMiGn97C53tMTE2gsg524hySCAi_So",
+      "traits": [
+          {
+              "trait_type": "Color",
+              "value": "Yellow"
+          },
+          {
+              "trait_type": "Type",
+              "value": "Ripple One"
+          }
+      ]
+  },
+  {
+      "code": "#254",
+      "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+      "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+      "traits": [
+          {
+              "trait_type": "Color",
+              "value": "White"
+          },
+          {
+              "trait_type": "Type",
+              "value": "Wave Two"
+          }
+      ]
+  },
+  {
+      "code": "#1254",
+      "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+      "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+      "traits": [
+          {
+              "trait_type": "Color",
+              "value": "White"
+          },
+          {
+              "trait_type": "Type",
+              "value": "Wave Two"
+          }
+      ]
+  },
+  {
+    "code": "#1240",
+    "owner": "CM1CPAJPZ59VCMtFBP5pdN4LT3MaziYZoaxDSBPTvJ65",
+    "src": "https://arweave.net/TFlPE0iN7DRzItMiGn97C53tMTE2gsg524hySCAi_So",
+    "traits": [
+        {
+            "trait_type": "Color",
+            "value": "Yellow"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Ripple One"
+        }
+    ]
+},
+{
+    "code": "#254",
+    "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+    "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+    "traits": [
+        {
+            "trait_type": "Color",
+            "value": "White"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Wave Two"
+        }
+    ]
+},
+{
+    "code": "#1254",
+    "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
+    "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
+    "traits": [
+        {
+            "trait_type": "Color",
+            "value": "White"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Wave Two"
+        }
+    ]
+},
+];
 const BurnPortal = () => {
+  const [show, setShow] = useState(false);
+  const [final, setFinal] = useState(false);
     const [noise,SetNoise] = useState('-');
-    const [connect,SetConnect] = useState(false);
-    const cardInfo = [
-      {
-          "code": "#1240",
-          "owner": "CM1CPAJPZ59VCMtFBP5pdN4LT3MaziYZoaxDSBPTvJ65",
-          "src": "https://arweave.net/TFlPE0iN7DRzItMiGn97C53tMTE2gsg524hySCAi_So",
-          "traits": [
-              {
-                  "trait_type": "Color",
-                  "value": "Yellow"
-              },
-              {
-                  "trait_type": "Type",
-                  "value": "Ripple One"
-              }
-          ]
-      },
-      {
-          "code": "#254",
-          "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
-          "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
-          "traits": [
-              {
-                  "trait_type": "Color",
-                  "value": "White"
-              },
-              {
-                  "trait_type": "Type",
-                  "value": "Wave Two"
-              }
-          ]
-      },
-      {
-          "code": "#254",
-          "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
-          "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
-          "traits": [
-              {
-                  "trait_type": "Color",
-                  "value": "White"
-              },
-              {
-                  "trait_type": "Type",
-                  "value": "Wave Two"
-              }
-          ]
-      },
+    const [connect,SetConnect] = useState(true);
+    
+    const countfunc = (product,isSelected) => {
+    //   console.log(product);
+    //   console.log(isSelected);
+      // console.log(count);
+      if(isSelected){
+        const filteredPeople = count.filter((item) => item !== product);
+        count = filteredPeople;
+      }else{
+        count.push(product);
+      }
 
-  ];
+      console.log(count);
+      
+    }
+    
   return (
     <>
       <div className='section-2new'>
@@ -77,12 +138,19 @@ const BurnPortal = () => {
                 </div>
                 <div>
                     { connect ?
-                        // {cardInfo.map((product, i) => (
-                        //   <Col key={i} sm={12} lg={6} style={{ padding: '5px' }}>
-                        //     <GalleryCard product={product} />
-                        //   </Col>
-                        // ))}
-                        <div></div>
+                    <Row className='mr-0'>
+                        {cardInfo.map((product, i) => (
+                          
+                            <Col key={i} sm={12} lg={4 } style={{ padding: '5px' }} onClick={() => {
+                              setShow(!show);
+                              
+
+                            }}>
+                              <SelectCard product={product} onSelect={countfunc}/>
+                            </Col>
+                          
+                        ))}
+                      </Row>
                     :
                     <button className="burnbutton" style={{marginTop:"43px",border:"0"}}>Connect Wallet</button>}
                     
@@ -98,30 +166,46 @@ const BurnPortal = () => {
 
       </div>
 
-      <div className='section-8 dark-bg px-3'>
+      <div className='section-8 px-3'>
         <Row>
           <Col lg={3}></Col>
           <Col lg={6} className='footer pt-1'>
-            <Row className='pt-0 pb-2'>
-              <Col lg={4} className='footer-brand pt-4 px-0'><p style={{ color: 'white' }}>Project Noise</p></Col>
-              <Col lg={5}></Col>
-              <Col lg={3} className='px-0'>
-                <Row className='m-0 p-0'>
-                  <Col lg={3}></Col>
-                  <Col className='text-center p-0'>
-                    <Nav.Link href='https://twitter.com/Prjctnoise' className='social-media-twitter'><div className='twitter' ></div></Nav.Link>
-                  </Col>
-                  <Col className='text-center p-0'>
-                    <Nav.Link href='https://discord.gg/2AXCqUWX5J' className='social-media-discord'><div className='discord' ></div></Nav.Link>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+          { connect ?
+                      <div style={{display: "inline-block", width:"100%", padding:"30px 0 20px 0"}}>
+                        <p style={{float: "left",color:"black"}}>{count.length} Noises selected</p>
+                        <div style={{float: "right"}}>
+                          <button  disabled={count.length<6} 
+                          onClick={()=>{setFinal(true);}}
+                          style={{backgroundImage: "linear-gradient(90deg, #0EFFB7, #FF130D, #FFFF00)",marginRight: "10px",padding:"10px",border:"0"}} 
+                          >Burn to Claim Pass!</button>
+                          <button style={{padding:"10px",border:"0"}}>Cancel</button>
+                        </div>
+                      </div>  
+                    :
+                    <div></div>}
           </Col>
           <Col lg={3}></Col>
         </Row>
       </div>
-
+      <Modal show={final} fullscreen='true' onHide={() => setFinal(false)}>
+        <Modal.Header closeButton className='custom'>
+          <Modal.Title className='modal-title'></Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='modal-body'>
+          <Row >
+            <Col lg={3}></Col>
+            <Col lg={6} className='px-3'>
+              <h1 className='primary-text' style={{textAlign:"center",fontSize:"28px !important"}}>Congratulations! <br/>
+On joining the club!</h1>
+              <div className='gifWeb' style={{width:"459px",height:"459px",margin:"20px 140px"}}>
+                <img src={web_hero_gif} />
+              </div>
+            <p style={{color:"black",textAlign:"center"}}>Thanks for participating!<br/>See you on the other side   </p>
+            </Col>
+            <Col lg={3}></Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };
