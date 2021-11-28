@@ -23,8 +23,8 @@ function App() {
         <Route exact path='/art' component={ArtPage} />
         <Route exact path='/mint' component={MintPage} />
         <Route exact path='/whitelist-checker' component={CheckResult} />
-        <Route exact path='/newhome' component={newHome} />
-        <Route exact path='/burnPortal' component={BurnPortal} />
+        {/* <Route exact path='/newhome' component={newHome} />
+        <Route exact path='/burnPortal' component={BurnPortal} /> */}
       </Switch>
     </Router>
 
