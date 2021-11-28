@@ -22,7 +22,7 @@ const cardInfo = [
       ]
   },
   {
-      "code": "#254",
+      "code": "#2654",
       "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
       "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
       "traits": [
@@ -37,7 +37,7 @@ const cardInfo = [
       ]
   },
   {
-      "code": "#1254",
+      "code": "#124",
       "owner": "G22JKaE5nPLT5b613QvjN6SdqpEK6c8noVtGPS99gq3C",
       "src": "https://arweave.net/jEsrUkwT0_5H4fvCbSVUW-9X-QSMXg4piYVBGUA5slU",
       "traits": [
