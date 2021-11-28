@@ -32,8 +32,13 @@ const GalleryPage = () => {
 
   const [numberOfPages, setNumberOfPages] = useState(0)
   const [displayedProducts, setDisplayedProducts] = useState(products.slice(0, perPage));
-
-
+  const { connection } = useConnection();
+  const { publicKey } = useWallet();
+  const wallet = useWallet();
+  const [value, setValue] = useState({});
+  const [check, setCheck] = useState(false);
+  const [type,setType] = useState('All');
+  const [color,setcolor] = useState('All');
 
   // search for traits
   function getColors(allProducts) {
@@ -66,23 +71,44 @@ const GalleryPage = () => {
   }
 
 
-
-  async function changeProducts(value, type) {
+  // const [tempproducts, setTempProducts] = useState([]);
+  async function changeProducts(valuetype,valuecolor) {
     //type
     //0 - color
     //1 - type
-    await setProducts(allProducts.filter(product => product.traits[type].value === value))
+    console.log(valuetype)
+    console.log(valuecolor)
+    
+    if(valuetype=='All' && valuecolor=='All'){
+      await setProducts(allProducts)
+      await setDisplayedProducts(products.slice(0, perPage))
+    }
+    else if(valuetype=='All'){
+      await setProducts(allProducts.filter(product => product.traits[0].value === valuecolor))
+      await setDisplayedProducts(products.slice(0, perPage))
+    }
+    else if(valuecolor='All'){
+      await setProducts(allProducts.filter(product => product.traits[1].value === valuetype))
+      await setDisplayedProducts(products.slice(0, perPage))
+    }
+    else{
+      await setProducts(allProducts.filter(product => product.traits[1].value === valuetype && product.traits[0].value === valuecolor))
+      // await setProducts(tempproducts.filter(product => product.traits[0].value === valuecolor))
+      await setDisplayedProducts(products.slice(0, perPage))
+    }
+    
     console.log(products)
 
   }
 
   const typeChange = async (e) => {
-    console.log(e.value)
-    //await changeProducts(e.target.value, 1)
-    await setProducts(allProducts.filter(product => product.traits[1].value === e.value), () => {
-      console.log(products)
-    })
-    await setDisplayedProducts(products.slice(0, perPage))
+    
+    setType(e.value)
+    await changeProducts(e.value, color)
+    // await setProducts(allProducts.filter(product => product.traits[1].value === e.value), () => {
+    //   console.log(products)
+    // })
+    
     // console.log(allProducts)
     //console.log(getType())
   }
@@ -92,17 +118,16 @@ const GalleryPage = () => {
 
 
   const colorChange = async (e) => {
-    console.log(e.value)
-    await changeProducts(e.value, 0)
-    console.log(getColors())
+    // console.log(e.value)
+    setcolor(e.value)
+    await changeProducts(type,e.value )
+    // await setProducts(allProducts.filter(product => product.traits[0].value === e.value), () => {
+    //   console.log(products)
+    // })
+    // await setDisplayedProducts(products.slice(0, perPage))
   }
 
-  const { connection } = useConnection();
-  const { publicKey } = useWallet();
-  const wallet = useWallet();
-  const [value, setValue] = useState({});
-  const [check, setCheck] = useState(false);
-
+  
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
   const network = WalletAdapterNetwork.Devnet;
 
@@ -156,15 +181,15 @@ const GalleryPage = () => {
     { value: 'Ripple Two', label: 'Ripple Two' },
     { value: 'Ripple Three', label: 'Ripple Three' },
     { value: 'Split', label: 'Split' },
-  ]
+  ];
   const options2 = [
     { value: 'All', label: 'Color: All' },
-    { value: 'red', label: 'red' },
-    { value: 'cyan', label: 'cyan' },
-    { value: 'yellow', label: 'yello' },
-    { value: 'white', label: 'white' },
-    { value: 'black', label: 'black' },
-  ]
+    { value: 'Red', label: 'red' },
+    { value: 'Cyan', label: 'cyan' },
+    { value: 'Yellow', label: 'yello' },
+    { value: 'White', label: 'white' },
+    { value: 'Black', label: 'black' },
+  ];
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
@@ -204,14 +229,14 @@ const GalleryPage = () => {
                             <option value="Split Three">Split Three</option>
                           </Form.Control>
                         </Form.Group> */}
-                        {/* <Select
+                        <Select
                           styles={customStyles}
                           options={options1}
                           onChange={typeChange} 
                           
                           placeholder={options1[0].label}
                           aria-label="Default select example"
-                        /> */}
+                        />
                       </Col>
                       <Col lg={4}>
 
@@ -225,14 +250,14 @@ const GalleryPage = () => {
                             <option value="black">Black</option>
                           </Form.Control>
                         </Form.Group> */}
-                        {/* <Select
+                        <Select
                           styles={customStyles}
                           options={options2}
                           onChange={colorChange} 
                           
                           placeholder={options2[0].label}
                           aria-label="Default select example"
-                        /> */}
+                        />
 
 
 
@@ -241,7 +266,7 @@ const GalleryPage = () => {
                     </Row>
                   </Col>
                   {/* <Col lg={3} className='p-0'> */}
-                  <div className='numberOfPieces'> {allProducts.length} pieces</div>
+                  <div className='numberOfPieces'> {products.length} pieces</div>
                   {/* </Col> */}
                 </Row>
               </Col>
